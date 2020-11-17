@@ -1,0 +1,303 @@
+PlayerId;LastName;FirstName;Gender;Height;Weight;ShirtNumber;Email;Country;Team;Abbr;Position
+1;Barkley;Ross;M;196;112;18;lshj2824@163.com;Australia;Miami Heat;MIA;"SmallForward;Center"
+2;Dembl;Moussa;M;172;99;47;jianp_yao@live.cn;Argentina;Orlando Magic;ORL;PowerForward
+3;Alaba;David;M;193;122;17;lili20266@163.com;Austria;Atlanta Hawks;ATL;Center
+4;Hummels;Mats;M;173;145;34;tjsdianxiandianlan@163.com;Australia;Washington Wizards;WSH;ShootingGuard
+5;Soares;Cdric;M;176;162;79;fkunlee@hotmail.com;Bosnia;Charlotte Hornets;CHA;PointGuard
+6;Cotterill;David;M;192;94;35;Support@eworldship.com;Bosnia Herzegovina;Detroit Pistons;DET;SmallForward
+7;Schpf;Alessandro;M;196;133;50;1121657066@qq.com;Brazil;Indiana Pacers;IND;PowerForward
+8;Babacan;Volkan;M;174;72;86;222Leifeng@163.com;Bahamas;Cleveland Cavaliers;CLE;Center
+9;Rog;Marko;M;177;74;73;chinawutong@126.com;Canada;Chicago Bulls;CHI;ShootingGuard
+10;Lou;Peter;M;187;91;46;bjwlslyxgs@3158.com;Congo;Milwaukee Bucks;MIL;PointGuard
+11;Neil;Ralap;M;196;125;72;inf996@163.com;Switzerland;Boston Celtics;BOS;SmallForward
+12;Sampson;Boyd;M;174;168;6;bjyslkjsyxgs@3158.com;Cameroon;Philadelphia 76ers;PHI;PowerForward
+13;Willie;Corey;M;178;79;32;wangxin@will-tech.com.cn;Democratic Republic of Congo;New York Knicks;NY;Center
+14;Jay;Gavin;M;193;138;20;fiona_yangyi@yahoo.com.cn;Germany;Brooklyn Nets;BKN;"ShootingGuard;PowerForward"
+15;Coleman;Samus;M;190;152;30;fecljp@126.com;The Dominican Republic;Toronto Raptors;TOR;SmallForward
+16;Sigursson;Gylfi;M;190;152;69;cash163@gmail.com;Spain;San Antonio Spurs;SA;SmallForward
+17;Schweinsteiger;Bastian;M;193;155;29;dlsjw@yahoo.com.cn;France;Memphis Grizzlies;MEM;SmallForward
+18;Baszczykowski;Jakub;M;187;100;73;81246866@163.com;Georgia;Dallas Mavericks;DAL;SmallForward
+19;Moutinho;Joo;M;193;159;77;bnsd820@126.com;Greece;Houston Rockets;HOU;SmallForward
+20;Stoch;Miroslav;M;178;118;30;yzm54188@yahoo.com.cn;Croatia;New Orleans Pelicans;NO;SmallForward
+20;Stoch;Miroslav;M;178;118;30;yzm54188@yahoo.com.cn;Croatia;New Orleans Pelicans;NO;SmallForward
+21;Quaresma;Ricardo;M;188;145;40;webmaster@@baidajob.com;Haiti;Denver Nuggets;DEN;SmallForward
+22;Tufan;Ozan;M;179;70;85;bdchina@bigdutchman.com;Israel;Utah Jazz;UTA;SmallForward
+23;Memushaj;Ledian;M;173;127;59;zhaoshang@net114.com;Italy;Portland Trail Blazers;POR;SmallForward
+24;Louis;Phil;M;198;79;60;872779240@qq.com;Lithuania;Oklahoma City Thunder;OKC;PowerForward
+25;Nelson;Randolph;M;187;169;17;6723809d@qq.com;Latvia;Sacramento Kings;SAC;Center
+26;Samuel;Bradley;M;191;77;5;yadasteel@163.com;Mali;Phoenix Suns;PHX;SmallForward
+27;Winfred;Cornelius;M;189;89;51;wch@public.tpt.tj.cn;Montenegro;L.A. Lakers;LAL;PowerForward
+28;Jeff;Gene;M;182;79;13;www.dgysdhs@gs.com;Nigeria;Los Angeles Clippers;LAC;Center
+29;Fellaini;Marouane;M;185;84;26;db.ys@163.com;New Zealand;Golden State Warriors;GS;SmallForward
+30;Lloris;Hugo;M;190;73;33;lianhuiduo@gmail.com;Puerto Rico;Miami Heat;MIA;PowerForward
+31;Kroos;Toni;M;182;103;0;airui@china-iris.com;Russia;Orlando Magic;ORL;Center
+32;ahin;Nuri;M;176;129;45;qinlonltm@163.com;Senegal;Atlanta Hawks;ATL;ShootingGuard
+33;der;Phil;M;179;168;6;cncta@cncta.org;Slovenia;Washington Wizards;WSH;PointGuard
+34;Lila;Andi;M;193;139;1;qiaomaicha@@@sina.com;Serbia;Charlotte Hornets;CHA;SmallForward
+35;Carvalho;William;M;182;118;83;aixin_buckwheat@yahoo.com.cn;South Sudan;Detroit Pistons;DET;PowerForward
+36;zyakup;Ouzhan;M;176;129;5;paws@enorth.com.cn;Tunisia;Indiana Pacers;IND;Center
+37;Pereira;Danilo;M;198;78;48;XF6831533@@126.com;Turkey;Cleveland Cavaliers;CLE;ShootingGuard
+38;Lucien;Philip;M;190;147;68;qiye@ocasia.com;Ukraine;Chicago Bulls;CHI;SmallForward
+39;Newman;Raymond;M;190;87;78;ap@hbyuansheng.com;America;Milwaukee Bucks;MIL;SmallForward
+40;Sandy;Brady;M;175;146;80;aanshengwuliu@163.com;Spain;Boston Celtics;BOS;SmallForward
+41;Winston;Cornell;M;172;102;14;luosi@luosi.com;France;Philadelphia 76ers;PHI;SmallForward
+42;Jeffrey;Geoffrey;M;200;98;17;ievezl@163.com;Georgia;New York Knicks;NY;Center
+43;Stones;John;M;174;138;67;wjy35858@yahoo.com;Greece;Brooklyn Nets;BKN;"ShootingGuard;SmallForward"
+44;Walker;Kyle;M;181;117;77;kefu@tjpinsou.com;Croatia;Toronto Raptors;TOR;PointGuard
+45;Arnautovi;Marko;M;171;117;66;pdt@pdt-china.com;Haiti;San Antonio Spurs;SA;SmallForward
+46;Piszczek;ukasz;M;196;118;24;aobosports@126.com;Israel;Memphis Grizzlies;MEM;PowerForward
+47;Halldrsson;Hannesr;M;178;148;84;99@alllike.com.cn;Italy;Dallas Mavericks;DAL;Center
+48;Balaj;Bekim;M;200;159;45;lisa@yongyefurniture.com;Lithuania;Houston Rockets;HOU;ShootingGuard
+49;Dier;Eric;M;172;141;49;asgrounp_hr@126.com;Latvia;New Orleans Pelicans;NO;SmallForward
+50;Berg;Marcus;M;182;71;68;aoyuksin.cn@163.com;Mali;Minnesota Timberwolves;MIN;SmallForward
+51;Kovalenko;Viktor;M;171;150;4;tjalb_1988@126.com;Montenegro;Denver Nuggets;DEN;SmallForward
+52;Luther;Porter;M;185;123;45;sunbao@188.com;Nigeria;Utah Jazz;UTA;SmallForward
+53;Nicholas;Aldrich;M;187;125;80;bjzhst@126.com;New Zealand;Portland Trail Blazers;POR;Center
+54;Saxon;Brandon;M;183;154;71;saran1314@163.com;Puerto Rico;Oklahoma City Thunder;OKC;ShootingGuard
+55;Woodrow;Curitis;M;195;86;67;jianlishe@163.com;Russia;Sacramento Kings;SAC;PointGuard
+56;Jeremy;George;M;185;139;29;kf@ebtow.com;Senegal;Phoenix Suns;PHX;SmallForward
+57;Duffy;Shane;M;186;85;3;chenli-ml967@163.com;Slovenia;L.A. Lakers;LAL;PowerForward
+58;Hughes;Aaron;M;197;73;66;cnzxncom@163.com;Serbia;Los Angeles Clippers;LAC;Center
+59;De Sciglio;Mattia;M;176;124;58;fefenga@mail.sy.ln.cn;South Sudan;Golden State Warriors;GS;ShootingGuard
+60;Buffon;Gianluigi;M;181;149;20;yuxin@agri.gov.cn;Tunisia;Miami Heat;MIA;SmallForward
+60;Buffon;Gianluigi;M;181;149;20;yuxin@agri.gov.cn;Tunisia;Miami Heat;MIA;SmallForward
+61;S?varsson;Birkir Mr;M;172;97;75;candokf@justcando.com.cn;Turkey;Atlanta Hawks;ATL;SmallForward
+62;Vargi;Ivan;M;198;125;52;byly@byly.com.cn;Ukraine;Washington Wizards;WSH;SmallForward
+63;Mrio;Joo;M;197;165;20;wxc_6208@@@com.cn;Haiti;Charlotte Hornets;CHA;Center
+64;Hinterseer;Lukas;M;170;170;45;cjbbyey668@sohu.com;Israel;Detroit Pistons;DET;Center
+65;Traustason;Arnr Ingvi;M;176;102;63;yk.wang@t-zcargo.com.cn;Italy;Indiana Pacers;IND;Center
+66;Lyle;Prescott;M;179;77;36;picknike24k@gmail.com;Lithuania;Cleveland Cavaliers;CLE;Center
+67;Nick;Alexander;M;193;160;53;lcyx0219@sina.com;Latvia;Chicago Bulls;CHI;Center
+68;Scott;Brian;M;183;164;12;xiejun@panasia.cn;Mali;Milwaukee Bucks;MIL;Center
+69;Wordsworth;Cyril;M;184;100;76;summer@qdbonwei.com.cn;Montenegro;Boston Celtics;BOS;Center
+70;Jerome;Gerald;M;182;106;50;syshuanglong@hotmail.com;Nigeria;Philadelphia 76ers;PHI;ShootingGuard
+71;McGinn;Niall;M;182;162;60;baoer120@sina.com;New Zealand;New York Knicks;NY;ShootingGuard
+72;Cabaye;Yohan;M;200;170;8;c3990@21cn.com;Puerto Rico;Brooklyn Nets;BKN;ShootingGuard
+73;El Shaarawy;Stephan;M;177;127;11;616340065@qq.com;Russia;Toronto Raptors;TOR;ShootingGuard
+74;Chiellini;Giorgio;M;198;133;63;bhzbcbb@gmail.com;Senegal;San Antonio Spurs;SA;ShootingGuard
+75;rnason;Kri;M;172;128;70;ruirui12@@sina.com;Slovenia;Memphis Grizzlies;MEM;Goalkeeper
+76;Kirly;Gbor;M;172;160;45;ahtauwu@126.com;Serbia;Dallas Mavericks;DAL;Center
+77;Hennessey;Wayne;M;171;128;42;zhaofx@cmes.org;South Sudan;Houston Rockets;HOU;ShootingGuard
+78;Magnsson;Hrur Bjrgvin;M;180;73;45;haoxing@haoxing.com;Tunisia;New Orleans Pelicans;NO;SmallForward
+79;Kujovi;Emir;M;195;164;27;854328295@qq.com;Turkey;Minnesota Timberwolves;MIN;SmallForward
+80;Lyndon;Primo;M;192;146;60;info@21wh.com;Ukraine;Denver Nuggets;DEN;SmallForward
+81;Nigel;Alfred;M;190;169;33;tjtuliao12@163.com;America;Utah Jazz;UTA;SmallForward
+82;Sean;Broderick;M;174;123;77;cmwmold@126.com;Spain;Portland Trail Blazers;POR;Center
+83;Wright;Dana;M;181;111;33;caoxueai@163.com;France;Oklahoma City Thunder;OKC;ShootingGuard
+84;Jerry;Gilbert;M;177;93;35;fly@vip.sina.com;Georgia;Sacramento Kings;SAC;PointGuard
+85;Magennis;Josh;M;180;126;76;lzc@tjvanke.com;Greece;Phoenix Suns;PHX;SmallForward
+86;Sissoko;Moussa;M;190;101;87;michael@yinglan.com;Croatia;L.A. Lakers;LAL;PowerForward
+87;Griezmann;Antoine;M;189;113;29;600645dsh@163.com;Bosnia;Los Angeles Clippers;LAC;Center
+88;Ogbonna;Angelo;M;193;165;18;zx@zxshare.com;Bosnia Herzegovina;Golden State Warriors;GS;ShootingGuard
+89;Sklason;Ari Freyr;M;196;140;15;a@allasky.com;Brazil;Miami Heat;MIA;SmallForward
+90;Gulcsi;Pter;M;177;158;47;ruland@jsmail.com.cn;Bahamas;Orlando Magic;ORL;SmallForward
+91;Edwards;David;M;189;146;75;47707724@qq.com;Canada;Atlanta Hawks;ATL;SmallForward
+92;Bvarsson;Jn Dai;M;188;125;13;vivian.21053@163.com;Congo;Washington Wizards;WSH;SmallForward
+93;Sigurjnsson;Rnar;M;185;96;38;fubang@bjfubang.com;Switzerland;Charlotte Hornets;CHA;Center
+94;Lynn;Quentin;M;199;119;29;yangchao666@126.com;Cameroon;Detroit Pistons;DET;ShootingGuard
+95;Noah;Alger;M;181;136;46;dingding.0226@163.com;Democratic Republic of Congo;Indiana Pacers;IND;PointGuard
+96;Sebastian;Barton;M;188;79;67;wzj280@126.com;Germany;Cleveland Cavaliers;CLE;SmallForward
+97;Wythe;Daniel;M;186;114;2;jsf@jsx.com.cn;The Dominican Republic;Chicago Bulls;CHI;PowerForward
+98;Jesse;Giles;M;185;140;0;rack-tianj333in@163.com;Spain;Milwaukee Bucks;MIL;Center
+99;de Gea;David;M;180;124;46;rack-tianjin@126.com;France;Boston Celtics;BOS;ShootingGuard
+100;Szczsny;Wojciech;M;182;126;6;jiweixian163@sina.com;Georgia;Philadelphia 76ers;PHI;SmallForward
+101;Seferovi;Haris;M;197;135;62;hr@honkonlaser.com;Greece;New York Knicks;NY;SmallForward
+102;Pogba;Paul;M;171;117;59;webmaster@huangye.sh.cn;Croatia;Brooklyn Nets;BKN;SmallForward
+103;Hallfresson;Emil;M;188;93;35;shhxgypd@126.com;Haiti;Toronto Raptors;TOR;SmallForward
+104;Kdr;Tams;M;198;74;82;soladms@163.com;Israel;San Antonio Spurs;SA;Center
+105;Keogh;Richard;M;185;164;56;tsysw.12315@yahoo.com;Italy;Memphis Grizzlies;MEM;ShootingGuard
+106;Williams;George;M;186;76;32;service@086jc.com;Lithuania;Dallas Mavericks;DAL;PointGuard
+107;Lewicki;Oscar;M;185;136;6;jetrun@live.com;Latvia;Houston Rockets;HOU;SmallForward
+108;Magee;Quennel;M;190;168;54;wxp@riyuejin.cn;Mali;New Orleans Pelicans;NO;PowerForward
+109;Noel;Allen;M;196;83;26;ythl39000210@126.com;Montenegro;Minnesota Timberwolves;MIN;Center
+110;Sid;Basil;M;180;144;61;aoli-dress@126.com;Nigeria;Denver Nuggets;DEN;ShootingGuard
+111;Xavier;Darcy;M;175;141;60;lfnswky@163.com;New Zealand;Utah Jazz;UTA;SmallForward
+112;Jim;Glenn;M;190;123;55;hr@zitoo.com.cn;Tunisia;Portland Trail Blazers;POR;SmallForward
+113;Evra;Patrice;M;189;81;46;Ellen@e-jiankun.com;Turkey;Oklahoma City Thunder;OKC;SmallForward
+114;Sagna;Bacary;M;180;136;49;dljs@263.net;Ukraine;Sacramento Kings;SAC;SmallForward
+115;Gignac;Andr-Pierre;M;187;93;54;lglglg721@163.com;America;Phoenix Suns;PHX;Center
+116;Barzagli;Andrea;M;184;100;9;service@umetal.com;Spain;L.A. Lakers;LAL;Center
+117;Gumundsson;Jhann Berg;M;171;127;52;xsdpx@yahoo.cn;France;Los Angeles Clippers;LAC;SmallForward
+118;Guzmics;Richrd;M;184;115;42;info@tegent.com.cn;Georgia;Golden State Warriors;GS;PowerForward
+119;Bellern;Hctor;M;181;169;15;gl8457@126.com;Greece;Miami Heat;MIA;Center
+120;Jnsson;Ingvar;M;170;148;18;kf3@jiaomai.com;Croatia;Orlando Magic;ORL;SmallForward
+121;Hauksson;Haukur;M;173;141;87;ea@eaonline.com;Bosnia;Atlanta Hawks;ATL;PowerForward
+122;Malcolm;Quincy;M;191;169;27;sales@cxtoy.com;Bosnia Herzegovina;Washington Wizards;WSH;Center
+123;Norman;Alston;M;198;168;24;88hueifa@163.com;Brazil;Charlotte Hornets;CHA;ShootingGuard
+124;Sidney;Beacher;M;197;109;20;consultora@conecplan.com;Bahamas;Detroit Pistons;DET;PointGuard
+125;Yale;Darnell;M;170;163;32;sales@haishunpackaging.com;Canada;Indiana Pacers;IND;SmallForward
+126;Jo;Godfery;M;188;96;58;rexuefeng@163.net;Congo;Cleveland Cavaliers;CLE;PowerForward
+127;Evans;Jonny;M;187;107;3;yu@hotmail.com;Switzerland;Chicago Bulls;CHI;Center
+128;Vermaelen;Thomas;M;192;123;39;user@ahzp.com;Cameroon;Milwaukee Bucks;MIL;ShootingGuard
+129;Payet;Dimitri;M;200;125;71;kefu@xhgx.cn;Democratic Republic of Congo;Boston Celtics;BOS;SmallForward
+130;Bonucci;Leonardo;M;198;170;21;xscbgs@suda.edu.cn;Germany;Philadelphia 76ers;PHI;SmallForward
+131;Bjarnason;Birkir;M;182;72;0;caorong_1979@163.com;The Dominican Republic;New York Knicks;NY;SmallForward
+132;Dzsudzsk;Balzs;M;179;157;31;shyu@shshuangyu.com;Spain;Brooklyn Nets;BKN;SmallForward
+133;Murphy;Daryl;M;193;133;33;web@chinachugui.com;France;Toronto Raptors;TOR;Center
+134;Lafferty;Kyle;M;173;158;82;sx@songxindianqi.com;Georgia;San Antonio Spurs;SA;ShootingGuard
+135;zbayrakl;ener;M;191;117;85;huixuan@vip.163.com;Greece;Memphis Grizzlies;MEM;PointGuard
+136;Mandel;Quinn;M;180;89;19;shanghai@onkyochina.com;Croatia;Dallas Mavericks;DAL;SmallForward
+137;Norton;Alva;M;195;103;70;xxx@xixixish.com;Haiti;Houston Rockets;HOU;PowerForward
+138;Silvester;Beau;M;175;148;59;fado1319@hotmail.com;Israel;New Orleans Pelicans;NO;Center
+139;Yehudi;Darren;M;177;141;16;webmaster@ccctg.com;Italy;Minnesota Timberwolves;MIN;ShootingGuard
+140;John;Gordon;M;183;140;40;ythl3210@163.com;Georgia;Denver Nuggets;DEN;SmallForward
+141;Rooney;Wayne;M;185;98;86;sourcing@jswb.com;Greece;Utah Jazz;UTA;SmallForward
+142;Koscielny;Laurent;M;193;129;28;wsjhw@126.com;Croatia;Portland Trail Blazers;POR;SmallForward
+143;Mandanda;Steve;M;194;140;44;cpp@cpp114.com;Bosnia;Oklahoma City Thunder;OKC;SmallForward
+144;Lichtsteiner;Stephan;M;177;142;51;gongkong@guanyuan.com.cn;Bosnia Herzegovina;Sacramento Kings;SAC;Center
+145;Gudjohnsen;Eidur;M;191;170;47;Shwohing@Sh163.net;Brazil;Phoenix Suns;PHX;ShootingGuard
+146;Elek;kos;M;186;158;6;david@milkyway.com.cn;Bahamas;L.A. Lakers;LAL;PointGuard
+147;Ward;Stephen;M;194;156;30;asklight@gmail.com;Canada;Los Angeles Clippers;LAC;SmallForward
+148;Korhut;Mihly;M;190;137;53;16377163@163.com;Congo;Golden State Warriors;GS;PowerForward
+149;Gregu;Jn;M;185;102;21;jihaiwei@126.com;Switzerland;Miami Heat;MIA;Center
+150;Marcus;Quintion;M;185;109;41;chinafmn@chinafmn.com;Cameroon;Orlando Magic;ORL;ShootingGuard
+151;Ogden;Alvin;M;182;169;1;7735kf@163.com;Democratic Republic of Congo;Atlanta Hawks;ATL;SmallForward
+152;Simon;Beck;M;182;170;74;y330@126.com;Croatia;Washington Wizards;WSH;SmallForward
+153;York;Dave;M;171;154;68;fubao@f139.com;Haiti;Charlotte Hornets;CHA;SmallForward
+154;Jonas;Greg;M;184;117;15;webmaster@e-jjj.com;Israel;Detroit Pistons;DET;SmallForward
+155;Smalling;Chris;M;174;120;88;lawon@sina.com;Italy;Indiana Pacers;IND;Center
+156;Rosick;Tom;M;171;84;33;181888@gmail.com;Lithuania;Cleveland Cavaliers;CLE;Center
+157;Huboan;Tom;M;191;121;46;hwp@chinaccm.com;Latvia;Chicago Bulls;CHI;Center
+158;Motta;Thiago;M;184;101;66;jlkmdz@163.com;Mali;Milwaukee Bucks;MIL;Center
+159;Wawrzyniak;Jakub;M;170;112;31;zhaoyanping8112@126.com;Montenegro;Boston Celtics;BOS;Center
+160;Stieber;Zoltn;M;191;132;79;c114@c114.net;Nigeria;Philadelphia 76ers;PHI;Center
+161;McCullough;Luke;M;186;111;8;info@hzconsulting.cn;New Zealand;New York Knicks;NY;Center
+162;Kalini;Lovre;M;183;122;77;info@helmshanghai.com;Tunisia;Brooklyn Nets;BKN;ShootingGuard
+163;Kimmich;Joshua;M;196;167;49;daisyzhu@163.com;Turkey;Toronto Raptors;TOR;ShootingGuard
+164;Marico;Rachel;M;180;138;78;info@hanhongchem.com;Ukraine;San Antonio Spurs;SA;ShootingGuard
+165;Oliver;Alvis;M;173;91;86;aceiw@sohu.com;America;Memphis Grizzlies;MEM;ShootingGuard
+166;Solomon;Ben;M;185;156;9;yp@jiaoyitong.com;Spain;Dallas Mavericks;DAL;ShootingGuard
+167;Yves;David;M;175;153;33;syaubyb*126.com;France;Houston Rockets;HOU;Goalkeeper
+168;Jonathan;Gregary;M;180;81;30;mingke18@126.com;Georgia;New Orleans Pelicans;NO;Center
+169;Nani;CV;M;194;123;0;ifaxing.cn@gmail.com;Greece;Minnesota Timberwolves;MIN;ShootingGuard
+170;Podolski;Lukas;M;178;111;88;wxiuge*tom.com;Croatia;Denver Nuggets;DEN;SmallForward
+171;Shirokov;Roman;M;199;115;16;jd@shanghaijd.com.cn;Bosnia;Utah Jazz;UTA;SmallForward
+172;Ibrahimovi;Zlatan;M;175;169;25;chenxindianlu@yeah.net;Bosnia Herzegovina;Portland Trail Blazers;POR;Center
+173;Jodowiec;Tomasz;M;171;76;53;jobs@vip.sina.com;Brazil;Oklahoma City Thunder;OKC;SmallForward
+174;Nmeth;Krisztin;M;172;97;19;whps@whpstc.com;Bahamas;Sacramento Kings;SAC;PowerForward
+175;Alli;Dele;M;177;146;1;mishubu@beijing2008.cn;Canada;Phoenix Suns;PHX;Center
+176;Carlgren;Patrik;M;182;141;38;shanghai@suneast.com;Congo;L.A. Lakers;LAL;SmallForward
+177;Weigl;Julian;M;195;73;58;siguona@163.com;Switzerland;Los Angeles Clippers;LAC;PowerForward
+178;Mark;Ralap;M;177;108;85;ea@eaonline.com.cn;Cameroon;Golden State Warriors;GS;Center
+179;Omar;Amos;M;199;165;52;chuanqiu@citiz.net;Democratic Republic of Congo;Miami Heat;MIA;ShootingGuard
+180;Spencer;Benedict;M;181;83;36;yx56667738@yahoo.com.cn;Germany;Orlando Magic;ORL;PointGuard
+181;Zachary;Dean;M;185;76;54;ythl329010@126.com;The Dominican Republic;Atlanta Hawks;ATL;SmallForward
+182;Joseph;Griffith;M;191;156;1;it114@mx.cei.gov.cn;Spain;Washington Wizards;WSH;PowerForward
+183;ech;Petr;M;185;122;59;sonicchen88@sina.com;France;Charlotte Hornets;CHA;Center
+184;Wilshere;Jack;M;198;162;39;qi-hang@qi-hang.com;Georgia;Detroit Pistons;DET;ShootingGuard
+185;Shatov;Oleg;M;191;118;69;master@gzyp21.net;Greece;Indiana Pacers;IND;SmallForward
+186;Matuidi;Blaise;M;175;105;33;hp@hmhf.cn;Croatia;Cleveland Cavaliers;CLE;SmallForward
+187;Glik;Kamil;M;196;131;56;shsl888@yahoo.cn;Haiti;Chicago Bulls;CHI;SmallForward
+188;Bde;Dniel;M;184;157;41;APaul222@hotmail.com;Israel;Milwaukee Bucks;MIL;SmallForward
+189;Dallas;Stuart;M;196;114;82;yidong_nb@163.com;Australia;Boston Celtics;BOS;Center
+190;Lang;dm;M;171;70;57;fangyifang@hc360.com;Bosnia;Philadelphia 76ers;PHI;ShootingGuard
+191;Golovin;Aleksandr;M;176;141;74;nanhao@nanhao.com;Bosnia Herzegovina;New York Knicks;NY;PointGuard
+192;Marlon;Randolph;M;182;104;25;09910@126.com;Brazil;Brooklyn Nets;BKN;SmallForward
+193;Orville;Andre;M;192;82;72;zikoo@zikoo.com;Bahamas;Toronto Raptors;TOR;PowerForward
+194;Stan;Benjamin;M;193;145;73;tiaolab@163.com;Canada;San Antonio Spurs;SA;Center
+195;Zebulon;Dempsey;M;193;114;60;xm@salebinfo.com;Congo;Memphis Grizzlies;MEM;ShootingGuard
+196;Joshua;Grover;M;170;78;37;service_cn@sugoo.com;Switzerland;Dallas Mavericks;DAL;SmallForward
+197;Schrrle;Andr;M;200;139;13;webmaster@zgdzsww.cn;Cameroon;Houston Rockets;HOU;SmallForward
+198;Giroud;Olivier;M;175;119;69;shangjun110@126.com;Democratic Republic of Congo;New Orleans Pelicans;NO;SmallForward
+199;Smolnikov;Igor;M;183;91;34;summerprint@hotmail.com;Germany;Minnesota Timberwolves;MIN;SmallForward
+200;Digne;Lucas;M;192;124;75;tb@spp.com.cn;The Dominican Republic;Denver Nuggets;DEN;Center
+201;Jdrzejczyk;Artur;M;185;94;45;buima2006@yahoo.com.cn;Spain;Utah Jazz;UTA;ShootingGuard
+202;Lovrencsics;Gerg;M;192;95;59;Service@changhaopipe.com;France;Portland Trail Blazers;POR;PointGuard
+203;Washington;Conor;M;189;92;54;windowscar212@163.com;Georgia;Oklahoma City Thunder;OKC;SmallForward
+204;Duda;Ondrej;M;195;166;24;yht2006sh@sina.com;Greece;Sacramento Kings;SAC;PowerForward
+205;koda;Milan;M;194;108;69;info@qinbifa.com;Croatia;Phoenix Suns;PHX;Center
+206;Marsh;Raymond;M;172;77;62;zxg18600@163.com;Haiti;L.A. Lakers;LAL;ShootingGuard
+207;Osborn;Andrew;M;195;79;55;isd99@163.com;Israel;Los Angeles Clippers;LAC;SmallForward
+208;Stanford;Bennett;M;176;132;17;57262493@qq.com;Italy;Golden State Warriors;GS;SmallForward
+209;Ziv;Dennis;M;170;132;1;lmxz@molss.gov;Lithuania;Miami Heat;MIA;SmallForward
+210;Joyce;Gustave;M;175;126;87;admin@ojn-sd.com;Latvia;Orlando Magic;ORL;SmallForward
+211;Hazard;Eden;M;194;139;70;wangkun@overseas-edu.com;Mali;Atlanta Hawks;ATL;Center
+212;Ramsey;Aaron;M;194;152;25;dongqig@cobwebs.com;Montenegro;Washington Wizards;WSH;Center
+213;Tymoshchuk;Anatoliy;M;189;128;51;SERVICE@ABTB.CN;Nigeria;Charlotte Hornets;CHA;Center
+214;Jallet;Christophe;M;184;131;40;sh_yuncai@163.com;New Zealand;Detroit Pistons;DET;Center
+215;Salamon;Bartosz;M;170;143;7;webmaster@51xiaoguo.com;Puerto Rico;Indiana Pacers;IND;Center
+216;Marchetti;Federico;M;192;157;9;ythl3awer210@126.com;Russia;Cleveland Cavaliers;CLE;Center
+217;McLaughlin;Conor;M;176;113;85;zhaopin@wuyoujob.com;Senegal;Chicago Bulls;CHI;Center
+218;Augustinsson;Ludwig;M;183;91;32;go007@go007.com;Slovenia;Milwaukee Bucks;MIL;ShootingGuard
+219;Ivanov;Oleg;M;174;77;55;lude985@sina.com;Serbia;Boston Celtics;BOS;ShootingGuard
+220;Marshall;Reg;M;200;152;60;support@cfchina.cn;South Sudan;Philadelphia 76ers;PHI;ShootingGuard
+221;Oscar;Andy;M;170;122;80;info@97xp.com;Tunisia;New York Knicks;NY;ShootingGuard
+222;Stanley;Benson;M;170;95;86;pxf@abi.com.cn;Turkey;Brooklyn Nets;BKN;ShootingGuard
+223;Glenn;Derrick;M;195;111;44;saizhi88@163.com;Ukraine;Toronto Raptors;TOR;Goalkeeper
+224;Julian;Guy;M;196;89;33;admin@zmould.cn;America;San Antonio Spurs;SA;Center
+225;Cahill;Gary;M;189;72;6;ythler3210@126.com;Spain;Memphis Grizzlies;MEM;ShootingGuard
+226;Fabiaski;ukasz;M;191;137;88;51mrrc@163.com;Croatia;Dallas Mavericks;DAL;SmallForward
+227;Sigrsson;Kolbeinn;M;184;149;16;healthr@healthr.com;Bosnia;Houston Rockets;HOU;SmallForward
+228;Sirigu;Salvatore;M;196;94;72;HZP852123@163.COM;Bosnia Herzegovina;New Orleans Pelicans;NO;Center
+229;Peszko;Sawomir;M;182;149;84;nmpx@ngx.net.cn;Brazil;Minnesota Timberwolves;MIN;SmallForward
+230;Candreva;Antonio;M;171;90;3;cpsa*china-cpsre.com;Bahamas;Denver Nuggets;DEN;PowerForward
+231;Rami;Adil;M;192;144;0;dongshangnet@126.com;Canada;Utah Jazz;UTA;Center
+232;Pjaca;Marko;M;176;72;49;webmaster@baidajob.com;Congo;Portland Trail Blazers;POR;SmallForward
+233;Koubek;Tom;M;194;134;69;ceofosn@126.com;Switzerland;Oklahoma City Thunder;OKC;PowerForward
+234;Martin;Regan;M;194;117;52;TC.ZIPPER@GMAIL.COM;Cameroon;Sacramento Kings;SAC;Center
+235;Osmond;Angelo;M;187;93;11;kstm@sina.com;Democratic Republic of Congo;Phoenix Suns;PHX;ShootingGuard
+236;Steven;Berg;M;186;137;56;qianyan.biz@hotmail.com;Croatia;L.A. Lakers;LAL;PointGuard
+237;Goddard;Devin;M;194;118;31;2008zhongbei@163.com;Haiti;Los Angeles Clippers;LAC;SmallForward
+238;Julius;Hale;M;193;163;57;ythl3210234@126.com;Israel;Golden State Warriors;GS;PowerForward
+239;Azpilicueta;Csar;M;184;140;72;ruiyan28@21cn.com;Italy;Miami Heat;MIA;Center
+240;Collins;James;M;176;128;57;qaz9239@163.com;Lithuania;Orlando Magic;ORL;ShootingGuard
+241;Pintilii;Mihai;M;190;71;66;yukong3@sina.com;Latvia;Atlanta Hawks;ATL;SmallForward
+242;Coman;Kingsley;M;196;96;2;shhuiye@126.com;Mali;Washington Wizards;WSH;SmallForward
+243;Krychowiak;Grzegorz;M;199;115;77;sales@shsuiye.com;Montenegro;Charlotte Hornets;CHA;SmallForward
+244;Florenzi;Alessandro;M;181;168;51;njzlxf@yp.ce.net.cn;Nigeria;Detroit Pistons;DET;SmallForward
+245;San Jos;Mikel;M;171;114;17;pyrcjlb@163.com;New Zealand;Indiana Pacers;IND;Center
+246;Jansson;Pontus;M;179;100;9;cs@72hr.cn;Tunisia;Cleveland Cavaliers;CLE;ShootingGuard
+247;Skalk;Ji;M;171;155;88;webmaster@bmacn.com;Turkey;Chicago Bulls;CHI;PointGuard
+248;Marvin;Reginald;M;198;70;55;chenli@chinaccm.com;Ukraine;Milwaukee Bucks;MIL;SmallForward
+249;Oswald;Augus;M;188;161;8;webmaster@sinopecec.com;America;Boston Celtics;BOS;PowerForward
+250;Stev;Bernard;M;196;169;18;PHONEjinyuan-lin@hotmail.com;Spain;Philadelphia 76ers;PHI;Center
+251;Godfery;Dick;M;182;109;57;chlitina@133sh.com;France;New York Knicks;NY;ShootingGuard
+252;Justin;Haley;M;189;117;73;ythl3210@126.com;Georgia;Brooklyn Nets;BKN;SmallForward
+253;Bertrand;Ryan;M;189;84;21;karde@sina.com;Greece;Toronto Raptors;TOR;SmallForward
+254;Ra;Rzvan;M;181;135;84;karderr@sina.com;Croatia;San Antonio Spurs;SA;SmallForward
+255;Chipciu;Alexandru;M;183;152;1;gift181@126.com;Bosnia;Memphis Grizzlies;MEM;SmallForward
+256;Mangala;Eliaquim;M;178;88;21;liuxianguo_1234@163.com;Bosnia Herzegovina;Dallas Mavericks;DAL;Center
+257;Zieliski;Piotr;M;192;79;80;jr999999999@163.com;Brazil;Houston Rockets;HOU;ShootingGuard
+258;Gman;Valeric;M;195;102;0;baidu@baidu-led.com;Bahamas;New Orleans Pelicans;NO;PointGuard
+259;Aduriz;Aritz;M;191;106;57;zhaohaiyan@kitking.com;Canada;Minnesota Timberwolves;MIN;SmallForward
+260;Pell;Graziano;M;187;121;28;sinomag@vip.sina.com;Congo;Denver Nuggets;DEN;PowerForward
+261;Tarashaj;Shani;M;194;76;53;xiansheng@texindex.com;Switzerland;Utah Jazz;UTA;Center
+262;Matt;Reuben;M;192;164;4;020art@gmail.com;Cameroon;Portland Trail Blazers;POR;ShootingGuard
+263;Otis;Ansel;M;189;152;11;ythl903210@126.com;Democratic Republic of Congo;Oklahoma City Thunder;OKC;SmallForward
+264;Steward;Bernie;M;173;133;76;webmaster@hrm.cnC;Germany;Sacramento Kings;SAC;SmallForward
+265;Gordon;Dominic;M;180;137;40;icaman3000@vip.163.com;The Dominican Republic;Phoenix Suns;PHX;SmallForward
+266;Keith;Hamiltion;M;176;71;82;zhangexpo1966@163.com;Spain;L.A. Lakers;LAL;SmallForward
+267;De Bruyne;Kevin;M;175;140;59;huyong@opg.cn;France;Los Angeles Clippers;LAC;Center
+268;Gunnarsson;Aron;M;188;74;52;floorchina@sina.com;Georgia;Golden State Warriors;GS;Center
+269;Prepeli;Andrei;M;198;92;29;chinajinshui@163.com;Greece;Miami Heat;MIA;Center
+270;Wernbloom;Pontus;M;187;99;2;food800@126.com;Croatia;Orlando Magic;ORL;Center
+271;Milik;Arkadiusz;M;193;81;71;jobssme@ssme.gov.cn;Haiti;Atlanta Hawks;ATL;Center
+272;Mel;Alexandru;M;191;131;48;shzhimojixie@126.com;Israel;Washington Wizards;WSH;Center
+273;Moubandje;Franois;M;200;93;52;webmaster@hf365.com;Australia;Charlotte Hornets;CHA;Center
+274;Gashi;Shklzen;M;190;70;55;shfuture@163.com;Bosnia;Detroit Pistons;DET;ShootingGuard
+275;Lindelf;Victor;M;198;94;88;longxi62967511@163.com;Bosnia Herzegovina;Indiana Pacers;IND;ShootingGuard
+276;Matthew;Sandy;M;173;82;73;cncec@cncec.com.cn;Brazil;Cleveland Cavaliers;CLE;ShootingGuard
+277;Otto;Antony;M;173;108;43;zhao_wei1982@hotmail.com;Bahamas;Chicago Bulls;CHI;ShootingGuard
+278;Tab;Bert;M;187;166;84;daocaozonghezhizuo@188.com;Canada;Milwaukee Bucks;MIL;ShootingGuard
+279;Greg;Don;M;176;109;28;shyh-sj@hotmail.com;Congo;Boston Celtics;BOS;Goalkeeper
+280;Kelly;Hardy;M;198;88;62;zsbm@wjc.com.cn;Switzerland;Philadelphia 76ers;PHI;Center
+281;Lukaku;Romelu;M;192;134;10;TKC99@PUBLIC1.WX.JS.CN;Cameroon;New York Knicks;NY;ShootingGuard
+282;Hoolahan;Wes;M;175;167;0;cnaacn@hotmail.com;Democratic Republic of Congo;Brooklyn Nets;BKN;SmallForward
+283;Ttruanu;Ciprian;M;184;70;49;changkun1984111@126.com;Germany;Toronto Raptors;TOR;SmallForward
+284;Ignashevich;Sergei;M;180;100;26;huachsh@winhere.cn;The Dominican Republic;San Antonio Spurs;SA;Center
+285;Almer;Robert;M;197;94;70;64015861@163.com;Spain;Memphis Grizzlies;MEM;SmallForward
+286;Grigore;Drago;M;198;80;44;dn88@dn88.cn;France;Dallas Mavericks;DAL;PowerForward
+287;Parolo;Marco;M;181;146;32;serve@333cn.com;Georgia;Houston Rockets;HOU;Center
+288;Butko;Bohdan;M;195;157;77;lin_c_x@hotmail.com;Greece;New Orleans Pelicans;NO;SmallForward
+289;Kapustka;Bartosz;M;189;166;41;tlylb@163.com;Croatia;Minnesota Timberwolves;MIN;PowerForward
+290;Maurice;Saxon;M;179;127;84;dscm2007@163.com;Haiti;Denver Nuggets;DEN;Center
+291;Owen;Antonio;M;179;80;30;Bpmot@online.sh.cn;Congo;Utah Jazz;UTA;ShootingGuard
+292;Taylor;Berton;M;184;93;42;lrjxuwei@126.com;Switzerland;Portland Trail Blazers;POR;"PointGuard;SmallForward"
+293;Gregary;Donahue;M;177;78;81;pcheng418@163.com;Cameroon;Oklahoma City Thunder;OKC;SmallForward
+294;Ken;Harlan;M;184;151;47;webmaster@anlideng.com;Democratic Republic of Congo;Sacramento Kings;SAC;PowerForward
+295;Henderson;Jordan;M;192;170;63;gzhtthj@163.com;Germany;Phoenix Suns;PHX;"Center;SmallForward"
+296;Olsson;Martin;M;186;155;38;hbkpjt@163.com;The Dominican Republic;L.A. Lakers;LAL;ShootingGuard
+297;Stanciu;Nicuor;M;183;89;47;magangchao@163.com;Spain;Los Angeles Clippers;LAC;SmallForward
+298;Berezutski;Aleksei;M;200;131;62;ntkt@cadg.cn;France;Golden State Warriors;GS;SmallForward
+299;zcan;Ramazan;M;183;118;38;info@tongzhuang.net;The Dominican Republic;Golden State Warriors;GS;SmallForward
+300;Torje;Gabriel;M;183;163;52;service@oemtimes.com;Spain;Golden State Warriors;GS;SmallForward
