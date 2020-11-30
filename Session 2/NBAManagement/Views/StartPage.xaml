@@ -1,0 +1,96 @@
+﻿<Page x:Class="NBAManagement.Views.StartPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBAManagement.Views"
+      mc:Ignorable="d"
+      Title="StartPage" Loaded="Page_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="logoImage"
+               Source="/NBAManagement;component/Resources/logo.jpg" 
+               Width="60" 
+               Height="120"
+               Margin="20,20,0,0" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top"/>
+        <Border Grid.Row="0">
+            <StackPanel>
+                <TextBlock Text="NBA Management System" 
+                           Style="{StaticResource TitleText}" 
+                           TextAlignment="Center"
+                           Margin="0, 80, 0, 30"
+                           FontSize="24pt"
+                           Grid.ColumnSpan="2"/>
+                <TextBlock Text="Welcome to use this NBA Management system, you can redirect to differnt pages according to your role by clicking the buttons below." 
+                           Style="{StaticResource NormalText}" 
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"
+                           FontSize="20px"/>
+                <Border BorderBrush="Gray" 
+                        BorderThickness="1px"
+                        Margin="20px"
+                        Width="500"
+                        Height="150"
+                        >
+                    <Grid>
+                        <Button x:Name="VisitorButton"
+                                Content="Visitor"
+                                Style="{StaticResource UserTypeButton}"
+                                HorizontalAlignment="Right"
+                                Margin="0 0 30 0"
+                                Click="VisitorButton_Click"/>
+                        <Button x:Name="AdminButton"
+                                Content="Admin"
+                                Style="{StaticResource UserTypeButton}"
+                                HorizontalAlignment="Left"
+                                Margin="30 0 0 0"
+                                Click="AdminButton_Click"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </Border>
+        <Border BorderBrush="Gray" 
+                    Margin="30"
+                    BorderThickness="1px" Grid.Row="1">
+            <Grid x:Name="LastMatchImagesLine">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button
+                        x:Name="PreviusPhotosButton"
+                        Grid.Column="0"
+                        Content="&lt;"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource NextButton}"
+                        Click="PreviusPhotosButton_Click"/>
+                <Image Grid.Column="1"
+                       Margin="10"
+                        x:Name="image1"/>
+                <Image Grid.Column="2" 
+                       Margin="10" 
+                       x:Name="image2"/>
+                <Image Grid.Column="3" 
+                       Margin="10" 
+                       x:Name="image3"/>
+                <Button
+                        x:Name="NextPhotosButton"
+                        Grid.Column="5"
+                        Content="&gt;"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Style="{StaticResource NextButton}"
+                        Click="NextPhotosButton_Click"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="NBAManagement.Controlls.TeamItemControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NBAManagement.Controlls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="86*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Style="{StaticResource ImageButtonStyle}"
+                Click="Logo_Click"
+                Grid.RowSpan="2"
+                Margin="5">
+            <Image Source="{Binding Logo}"/>
+        </Button>
+        <TextBlock Text="{Binding TeamName}"
+                   Style="{StaticResource NormalText}"
+                   Grid.Column="1"
+                   Margin="5" Foreground="#FF4F4F4F"/>
+        <Grid Grid.Row="1"
+              Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"
+                   Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+                   Style="{StaticResource NormalText}"
+                   Margin="2, 5, 2, 5"
+                   TextAlignment="Center"
+                   FontSize="10px"><Hyperlink Click="OpenRoasterInfo">Roster</Hyperlink></TextBlock>
+            <TextBlock Grid.Column="1"
+                   Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+                   Style="{StaticResource NormalText}"
+                   Margin="2, 5, 2, 5"
+                   FontSize="10px" TextAlignment="Center"><Hyperlink Click="OpenMatchupInfo">Matchup</Hyperlink></TextBlock>
+            <TextBlock Grid.Column="2"
+                   Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+                   Style="{StaticResource NormalText}"
+                   Margin="2, 5, 2, 5"
+                   FontSize="10px" TextAlignment="Center"><Hyperlink Click="OpenFirstLineUp">First LineUp</Hyperlink></TextBlock>
+
+        </Grid>
+    </Grid>
+</UserControl>

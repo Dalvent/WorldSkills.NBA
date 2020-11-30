@@ -1,0 +1,66 @@
+﻿<Page x:Class="NBAManagement.Views.VisitorMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBAManagement.Views"
+      mc:Ignorable="d" 
+      Title="VisitorMainPage">
+
+    <Border Margin="75" BorderThickness="1px" BorderBrush="{StaticResource footerColor}">
+        <Grid Margin="75">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Button x:Name="TeamsButton"
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Teams"
+                Style="{StaticResource UserTypeButton}"
+                Width="220"
+                FontSize="24px"
+                Click="TeamsButton_Click"/>
+
+            <Button x:Name="PlayersButton"
+                Grid.Column="1"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Players"
+                Style="{StaticResource UserTypeButton}"
+                Width="220"
+                FontSize="24px"
+                Click="PlayersButton_Click"/>
+
+            <Button x:Name="Mutchups"
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Mutchups"
+                Style="{StaticResource UserTypeButton}"
+                Width="220"
+                FontSize="24px"
+                Click="Mutchups_Click"/>
+
+                <Button x:Name="Photos"
+                Grid.Column="1"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Photos"
+                Style="{StaticResource UserTypeButton}"
+                Width="220"
+                FontSize="24px"   
+                Click="Photos_Click"/>
+            </Grid>
+    </Border>
+</Page>

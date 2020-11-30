@@ -1,0 +1,201 @@
+﻿<Application x:Class="NBAManagement.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NBAManagement" xmlns:converter="clr-namespace:NBAManagement.Converter"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <converter:GameStatusConverter x:Key="gameStatusConverter"/>
+        <converter:ListNumberConverter x:Key="listNumberConverter"/>
+        <!--Color-->
+        <SolidColorBrush x:Key="footerColor" Color="#FF6995C2"/>
+        <SolidColorBrush x:Key="blueColor" Color="#FF0070C0"/>
+        <SolidColorBrush x:Key="darkGray" Color="#FF434343"/>
+
+        <!--Style-->
+        <Style x:Key="TitleText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+        </Style>
+        <Style TargetType="DatePicker">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+        </Style>
+        <Style x:Key="NormalText" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="FontFamily" Value="Microsoft Sans Serif, Arial"/>
+            <Setter Property="FontSize" Value="10pt"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="FontFamily" Value="Microsoft Sans Serif, Arial"/>
+            <Setter Property="FontSize" Value="10pt"/>
+            <Style.Triggers>
+                <Trigger Property="IsReadOnly" Value="True">
+                    <Setter Property="Background" Value="Gray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="statusBlock" BasedOn="{StaticResource NormalText}">
+            <Setter Property="Margin" Value="5, 7"/>
+            <Setter Property="Width" Value="125"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Padding" Value="2"/>
+            <Style.Triggers>
+                <Trigger Property="Text" Value="Finished">
+                    <Setter Property="Background" Value="Gray"/>
+                </Trigger>
+                <Trigger Property="Text" Value="Running">
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+                <Trigger Property="Text" Value="Not start">
+                    <Setter Property="Background" Value="{StaticResource blueColor}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="FontFamily" Value="Calibri"/>
+            <Setter Property="FontSize" Value="12pt"/>
+        </Style>
+        <Style TargetType="Button" x:Key="UserTypeButton">
+            <Setter Property="Background" Value="{StaticResource footerColor}"/>
+            <Setter Property="Width" Value="150px"/>
+            <Setter Property="Height" Value="70px"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="32px"/>
+            <Setter Property="FontFamily" Value="Microsoft Sans Serif, Arial"/>
+        </Style>
+        <Style TargetType="Button" x:Key="NextButton">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="FontSize" Value="120px"/>
+            <Setter Property="BorderThickness" Value="0px"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="FontFamily" Value="Microsoft Sans Serif, Arial"/>
+        </Style>
+        <Style TargetType="DataGridCell" x:Key="StandartCell">
+            <Setter Property="TextBlock.Foreground" Value="#FF535353"/>
+            <Setter Property="TextBlock.FontFamily" Value="Microsoft Sans Serif, Arial"/>
+            <Setter Property="TextBlock.FontSize" Value="10pt"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Grid>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="CenterTextDataGridCellStyle" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static DataGrid.FocusBorderBrushKey}}"/>
+                </Trigger>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsSelected" Value="true"/>
+                        <Condition Property="Selector.IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                    <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}}"/>
+                </MultiTrigger>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ImageButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--ControlTemplate-->
+        <ControlTemplate x:Key="RoundButtonTemplate" TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" CornerRadius="5" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                <ContentPresenter x:Name="contentPresenter" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="True">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF444444"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF444444"/>
+                </Trigger>
+                <Trigger Property="ToggleButton.IsChecked" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF444444"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" TargetName="border" Value="Gray"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF444444"/>
+                    <Setter Property="Foreground" Value="#FF838383"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    
+        <!--DataTemplate-->
+        <DataTemplate x:Key="TeamItemTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="17*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="86*"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="{Binding Logo}"
+               Grid.RowSpan="2"
+               Margin="5"/>
+                <TextBlock Text="{Binding Name}"
+                   Style="{StaticResource NormalText}"
+                   Grid.Column="1"
+                   Margin="5" Foreground="#FF4F4F4F"/>
+                <Grid Grid.Row="1"
+              Grid.Column="1">
+
+                    <TextBlock Text="{Binding Coach}"
+                   Grid.Column="0"
+                   Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
+                   Style="{StaticResource NormalText}"
+                   Margin="2, 5, 2, 5"
+                   FontSize="10px"/>
+
+                </Grid>
+            </Grid>
+        </DataTemplate>
+        
+    </Application.Resources>
+</Application>

@@ -1,0 +1,265 @@
+﻿<Page x:Class="NBAManagement.Views.PlayerDetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBAManagement.Views" xmlns:data="clr-namespace:NBAManagement.Models" xmlns:charting="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization" xmlns:system="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Player Detail">
+    <Page.Resources>
+        <SolidColorBrush x:Key="buttonStandartColor" Color="#FFEDEDED"/>
+        <SolidColorBrush x:Key="buttonHighlightColor" Color="#FF00B0F0"/>
+        <system:DateTime x:Key="dateTime" />
+        <data:Season x:Key="season"/>
+        <Style TargetType="TextBlock" BasedOn="{StaticResource NormalText}">
+            <Setter Property="FontSize" Value="15px"/>
+        </Style>
+        <Style TargetType="Button" x:Key="chartButton">
+            <Setter Property="Width" Value="125"/>
+            <Setter Property="Margin" Value="3, 10, 3, 10"/>
+            <Setter Property="Foreground" Value="{StaticResource darkGray}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
+
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="0"
+              Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image
+                   Grid.RowSpan="5" Margin="10, 20, 10, 70">
+                <Image.Source>
+                    <Binding Path="Img">
+                        <Binding.TargetNullValue>
+                            <ImageSource>/Resources/person.png</ImageSource>
+                        </Binding.TargetNullValue>
+                    </Binding>
+                </Image.Source>
+            </Image>
+            <Border Grid.Column="1"
+                    Grid.ColumnSpan="4"
+                    Grid.Row="0"
+                    Margin="0, 0, 40, 0"
+                    BorderThickness="0, 0, 0, 1"
+                    VerticalAlignment="Bottom"
+                    BorderBrush="{StaticResource darkGray}">
+                <TextBlock Text="{Binding FullName}"
+                           FontSize="24px"
+                           Foreground="{StaticResource darkGray}"
+                           FontWeight="Bold"/>
+            </Border>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Grid.ColumnSpan="4" Grid.Row="1" Grid.Column="1">
+                <TextBlock Text="{Binding Path=CurrentTeam.ShirtNumber, StringFormat=#{0}}"/>
+                <TextBlock Text="|" Margin="15, 0, 15, 0"/>
+                <TextBlock Text="{Binding Height}"/>
+                <TextBlock Text="|" Margin="15, 0, 15, 0"/>
+                <TextBlock Text="{Binding CurrentTeam.Team.TeamName}"/>
+            </StackPanel>
+            <TextBlock Grid.Column="1" 
+                       Grid.Row="2" 
+                       VerticalAlignment="Center"
+                       Text="Born"/>
+            <TextBlock Grid.Column="2" 
+                       Grid.Row="2" 
+                       VerticalAlignment="Center"
+                       Text="{Binding DateOfBirth, StringFormat='yyyy-MM-dd'}"
+                       Foreground="{StaticResource darkGray}"
+                      FontWeight="Bold"/>
+            <TextBlock Grid.Column="3" 
+                       Grid.Row="2" 
+                       VerticalAlignment="Center"
+                       Text="Experience"/>
+            <TextBlock Grid.Column="4" 
+                       Grid.Row="2" 
+                       VerticalAlignment="Center"
+                       Text="{Binding Path=YearExperience, StringFormat={}{0} years}"
+                       Foreground="{StaticResource darkGray}"
+                       FontWeight="Bold"/>
+            <TextBlock Grid.Column="1" 
+                       Grid.Row="3" 
+                       VerticalAlignment="Center"
+                       Text="College"/>
+            <TextBlock Grid.Column="2" 
+                       Grid.Row="3" 
+                       VerticalAlignment="Center"
+                       Text="{Binding College}"
+                       Foreground="{StaticResource darkGray}"
+                       FontWeight="Bold"/>
+            <TextBlock Grid.Column="3" 
+                       Grid.Row="3" 
+                       VerticalAlignment="Center"
+                       Text="Salary"/>
+            <TextBlock Grid.Column="4" 
+                       Grid.Row="3" 
+                       VerticalAlignment="Center"
+                       Text="{Binding CurrentTeam.Salary, StringFormat={}${0:F0}}"
+                       Foreground="{StaticResource darkGray}"
+                       FontWeight="Bold"/>
+        </Grid>
+        <StackPanel Grid.Column="1" Margin="15">
+            <TextBlock Text="{Binding Source={StaticResource season}, Path=LastSeason}" Margin="10"/>
+            <Border BorderThickness="1" BorderBrush="{StaticResource darkGray}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Grid.Column="0"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="PPG" Foreground="{StaticResource darkGray}" FontSize="12px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="1"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="APG" Foreground="{StaticResource darkGray}" FontSize="12px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="2"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="RPG" Foreground="{StaticResource darkGray}" FontSize="12px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="0"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+                        <TextBlock Text="{Binding CurrentSeasonPPG, StringFormat=F}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="1"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+                        <TextBlock Text="{Binding CurrentSeasonAPG, StringFormat=F}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="2"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+                        <TextBlock Text="{Binding CurrentSeasonRPG, StringFormat=F}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+
+                </Grid>
+            </Border>
+            <TextBlock Text="Carreer" Margin="10"/>
+            <Border BorderThickness="1" BorderBrush="{StaticResource darkGray}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Grid.Column="0"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="PPG" Foreground="{StaticResource darkGray}" FontSize="12px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="1"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="APG" Foreground="{StaticResource darkGray}" FontSize="12px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Row="0" Grid.Column="2"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1"
+                            Background="LightGray">
+                        <TextBlock Text="RPG" Foreground="{StaticResource darkGray}" FontSize="12px" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+
+                    <Border Grid.Row="1" Grid.Column="0"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+                        <TextBlock Text="{Binding CareerPPG, StringFormat=F}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="1"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+                        <TextBlock Text="{Binding CareerAPG, StringFormat=F}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <Border Grid.Row="1" Grid.Column="2"
+                            BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+                        <TextBlock Text="{Binding CareerRPG, StringFormat=F}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+
+                </Grid>
+            </Border>
+        </StackPanel>
+        <Border Grid.ColumnSpan="2"
+                Grid.Row="1"
+                Margin="10"
+                BorderBrush="{StaticResource darkGray}"
+                BorderThickness="1px">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Height="40" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Center"
+                       Text="Date:"
+                       Margin="10"
+                       Foreground="{StaticResource darkGray}"/>
+                    <DatePicker Name="startDatePicker"
+                                Width="120px"
+                                FontSize="12px"
+                                Foreground="Black"
+                                Margin="7"/>
+                    <TextBlock VerticalAlignment="Center"
+                       Text="-"
+                       Margin="20, 10, 20, 10"
+                       Foreground="{StaticResource darkGray}"/>
+                    <DatePicker SelectedDate="{Binding Path=DateTime.Now, Source={StaticResource dateTime} }"
+                                Name="endDatePicker"
+                                Width="120px"
+                                FontSize="12px"
+                                Foreground="Black"
+                                Margin="7"/>
+                    <Button x:Name="SearchButton"
+                            Template="{StaticResource RoundButtonTemplate}"
+                            Margin="3, 9, 0, 9"
+                            Width="50"
+                            Content="Search"
+                            FontSize="10px"
+                            Click="SearchButton_Click"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" DockPanel.Dock="Top" Height="47" Orientation="Horizontal">
+                    <Button x:Name="pointsButton" Content="POINTS" Style="{StaticResource chartButton}" Click="SwitchDataOnChart" Background="{StaticResource buttonStandartColor}"/>
+                    <Button x:Name="reboundsButton" Content="REBOUNDS" Style="{StaticResource chartButton}" Click="SwitchDataOnChart" Background="{StaticResource buttonStandartColor}"/>
+                    <Button x:Name="assistsButton" Content="ASSISTS" Style="{StaticResource chartButton}" Click="SwitchDataOnChart" Background="{StaticResource buttonStandartColor}"/>
+                    <Button x:Name="stealsButton" Content="STEALS" Style="{StaticResource chartButton}" Click="SwitchDataOnChart" Background="{StaticResource buttonStandartColor}"/>
+                    <Button x:Name="blocksButton" Content="BLOCKS" Style="{StaticResource chartButton}" Click="SwitchDataOnChart" Background="{StaticResource buttonStandartColor}"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" DockPanel.Dock="Top" Orientation="Horizontal">
+                    <TextBlock Text="The average of points:"/>
+                    <TextBlock x:Name="averageOfPointsTextBlock" />
+                </StackPanel>
+                <WindowsFormsHost Background="White"
+                                  Margin="10">
+                    <charting:Chart x:Name="statisticChart"/>
+                </WindowsFormsHost>
+            </DockPanel>
+        </Border>
+    </Grid>
+</Page>
