@@ -107,12 +107,12 @@ namespace NBAManagement.Models
             modelBuilder.Entity<Matchup>()
                 .HasMany(e => e.MatchupLog)
                 .WithRequired(e => e.Matchup)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<Matchup>()
                 .HasMany(e => e.PlayerStatistics)
                 .WithRequired(e => e.Matchup)
-                .WillCascadeOnDelete(false);
+                .WillCascadeOnDelete(true);
 
             modelBuilder.Entity<MatchupLog>()
                 .Property(e => e.OccurTime)

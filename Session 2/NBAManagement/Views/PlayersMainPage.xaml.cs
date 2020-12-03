@@ -128,7 +128,7 @@ namespace NBAManagement.Views
                 return;
 
             var selectedPlayer = ((PlayerInTeam)selectedItem).Player;
-            FrameManager.OpenPage(new PlayerDetail(selectedPlayer));
+            NavigationManager.OpenPage(new PlayerDetail(selectedPlayer));
         }
     }
 }

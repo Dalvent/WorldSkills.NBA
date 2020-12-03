@@ -1,0 +1,38 @@
+﻿<Page x:Class="NBAManagement.Views.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBAManagement.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Admin Login">
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30, 30" Name="mainPanel">
+        <TextBlock Text="Users can login into the system using their jobnumber and password." Style="{StaticResource NormalText}" Margin="10, 10, 10, 60"/>
+        <DockPanel>
+            <TextBlock Text="Jobnumber" Width="80" Style="{StaticResource NormalText}" Foreground="{StaticResource darkGray}" Margin="5" VerticalAlignment="Center"/>
+            <TextBox x:Name="jobnumberBox" Padding="4" Margin="5" Height="28"/>
+        </DockPanel>
+        <DockPanel>
+            <TextBlock Text="Password" Width="80" Style="{StaticResource NormalText}" Foreground="{StaticResource darkGray}" Margin="5" VerticalAlignment="Center"/>
+            <PasswordBox x:Name="passwordBox" Padding="4" Margin="5" Height="28"/>
+        </DockPanel>
+        <CheckBox Name="rememberMeComboBox" Content="Remember me" Margin="30" Foreground="{StaticResource darkGray}"/>
+        <Grid>
+            <Button x:Name="loginButton" Click="loginButton_Click" Content="Login" HorizontalAlignment="Left" Width="80" Height="30" Template="{StaticResource RoundButtonTemplate}" Margin="10"/>
+            <Button x:Name="cancelButton" Click="cancelButton_Click" Content="Cancel" HorizontalAlignment="Right" Width="80" Height="30" Template="{StaticResource RoundButtonTemplate}" Margin="10"/>
+        </Grid>
+        <Popup x:Name="chooseAdminTypePoput" AllowsTransparency="True" Focusable="True" PopupAnimation="Fade" Placement="Center" PlacementTarget="{Binding ElementName=mainPanel}">
+            <Border Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="3" BorderBrush="{StaticResource darkGray}" Background="White">
+                <StackPanel>
+                    <Button x:Name="closeChooseAdminTypePoput" Click="closeChooseAdminTypePoput_Click" HorizontalAlignment="Right" Content="X" Width="20" Margin="3" Foreground="DarkRed"/>
+                    <TextBlock Text="FOR TESTING ONLY!" FontWeight="Bold" FontStyle="Italic" Foreground="#FFBF9000" TextAlignment="Center" FontSize="22px" Margin="10"/>
+                    <TextBlock Text="Which type of user would you like to log in to the system as?" Style="{StaticResource NormalText}" Margin="40, 20, 40, 5" TextAlignment="Center" TextWrapping="Wrap"/>
+                    <Button x:Name="evnetAdminButton" Click="evnetAdminButton_Click" Content="Event Administarator" HorizontalAlignment="Center" Width="200" Height="40" Template="{StaticResource RoundButtonTemplate}" Foreground="Black" Margin="10"/>
+                    <Button x:Name="technicalAdminButton" Click="technicalAdminButton_Click"  Content="Technical Administarator" HorizontalAlignment="Center" Width="200" Height="40" Template="{StaticResource RoundButtonTemplate}" Foreground="Black" Margin="10"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </StackPanel>
+</Page>

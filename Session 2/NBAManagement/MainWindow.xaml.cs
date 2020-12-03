@@ -36,9 +36,8 @@ namespace NBAManagement
         {
             InitializeComponent();
             mainFrame.Navigating += OnNavigating;
-            FrameManager.TargetFrame = mainFrame;
+            NavigationManager.Init(mainFrame);
             nbaFooterText.Text = GenerateNbaFooterText();
-
             var i = NBAContext.Instance.PlayerStatistics.ToArray();
         }
 
@@ -56,17 +55,27 @@ namespace NBAManagement
                 Header.Visibility = Visibility.Visible;
                 break;
             case NavigationMode.Back:
-                if(!FrameManager.CanGoBack)
+                if(!NavigationManager.CanGoBack)
                     Header.Visibility = Visibility.Hidden;
                 break;
             default:
                 break;
             }
+
+            if(NavigationManager.IsLogin) 
+                logoutButton.Visibility = Visibility.Visible;
+            else 
+                logoutButton.Visibility = Visibility.Hidden;
         }
        
         private void Back(object sender, RoutedEventArgs e)
         {
-            FrameManager.GoBack();
+            NavigationManager.GoBack();
+        }
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationManager.Logout();
         }
     }
 }

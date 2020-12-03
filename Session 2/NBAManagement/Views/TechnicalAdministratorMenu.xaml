@@ -1,0 +1,47 @@
+﻿<Page x:Class="NBAManagement.Views.TechnicalAdministratorMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBAManagement.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Technical Administrator Menu">
+
+    <Grid>
+        <Border Margin="75" BorderThickness="1px" BorderBrush="{StaticResource footerColor}">
+            <Grid Margin="75">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="executionsButton"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Content="Manage Executions"
+                    Style="{StaticResource UserTypeButton}"
+                    Width="220"
+                    FontSize="24px"
+                    Click="executionsButton_Click"/>
+
+                <Button x:Name="teamReportButton"
+                Grid.Column="1"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Content="Team Report"
+                Style="{StaticResource UserTypeButton}"
+                Width="220"
+                FontSize="24px"
+                Click="teamReportButton_Click"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

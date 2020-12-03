@@ -5,6 +5,7 @@ namespace NBAManagement.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("Team")]
     public partial class Team
@@ -41,6 +42,23 @@ namespace NBAManagement.Models
 
         [Required]
         public byte[] Logo { get; set; }
+
+        public decimal GetSeassonTotlaSalary(Season season)
+        {
+            decimal totalSalary = 0;
+            foreach(var playerInTeam in PlayerInTeam.Where(pit => pit.Season == season))
+            {
+                totalSalary += playerInTeam.Salary;
+            }
+            return totalSalary;
+        }
+        public decimal CurrentSeasonTotalSlary
+        {
+            get
+            {
+                return GetSeassonTotlaSalary(NBAContext.Instance.Season.ToList().Last());
+            }
+        }
 
         public virtual Division Division { get; set; }
 

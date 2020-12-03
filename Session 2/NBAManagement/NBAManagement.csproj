@@ -41,6 +41,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -75,10 +78,16 @@
     <Compile Include="Controlls\TeamItemControl.xaml.cs">
       <DependentUpon>TeamItemControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converter\BoolToYesNoConverter.cs" />
+    <Compile Include="Converter\MatchupTypeEnumConverter.cs" />
+    <Compile Include="Converter\VisibilityToLogicalConverter.cs" />
     <Compile Include="Converter\IndexToNumConverter.cs" />
     <Compile Include="Converter\ListNumberConverter.cs" />
     <Compile Include="Converter\NumDivisionConverter.cs" />
     <Compile Include="Converter\GameStatusConverter.cs" />
+    <Compile Include="Filter\TeamConferenceFilter.cs" />
+    <Compile Include="Filter\TeamDivisionFilter.cs" />
+    <Compile Include="LoginInvalidException.cs" />
     <Compile Include="Models\ActionType.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Conference.cs" />
@@ -89,6 +98,7 @@
     <Compile Include="Models\MatchupDetail.cs" />
     <Compile Include="Models\MatchupLog.cs" />
     <Compile Include="Models\MatchupType.cs" />
+    <Compile Include="Models\MatchupTypeEnum.cs" />
     <Compile Include="Models\NBAContext.cs" />
     <Compile Include="Models\Pictures.cs" />
     <Compile Include="Models\Player.cs" />
@@ -98,6 +108,7 @@
     <Compile Include="Models\PostSeason.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Season.cs" />
+    <Compile Include="Models\SeasonDetails.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Filter\FilteredEnumerable.cs" />
     <Compile Include="Filter\FilterMultiplier.cs" />
@@ -111,6 +122,28 @@
     <Compile Include="Filter\PagedEnumerable.cs" />
     <Compile Include="Filter\PlayerStatisticDateIntervalFilter.cs" />
     <Compile Include="Filter\StringContainsFilter.cs" />
+    <Compile Include="Models\TeamReport.cs" />
+    <Compile Include="Views\AddNewMatchupForRegularSeasonPage.xaml.cs">
+      <DependentUpon>AddNewMatchupForRegularSeasonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EventAdministratorMenu.xaml.cs">
+      <DependentUpon>EventAdministratorMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageMachupsPage.xaml.cs">
+      <DependentUpon>ManageMachupsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManagePlayerPage.xaml.cs">
+      <DependentUpon>ManagePlayerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageSeasonsPage.xaml.cs">
+      <DependentUpon>ManageSeasonsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManageTeamsPage.xaml.cs">
+      <DependentUpon>ManageTeamsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MatchupDetailPage.xaml.cs">
       <DependentUpon>MatchupDetailPage.xaml</DependentUpon>
     </Compile>
@@ -131,6 +164,12 @@
     </Compile>
     <Compile Include="Views\TeamDetailPage.xaml.cs">
       <DependentUpon>TeamDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TeamReaportPage.xaml.cs">
+      <DependentUpon>TeamReaportPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TechnicalAdministratorMenu.xaml.cs">
+      <DependentUpon>TechnicalAdministratorMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\VisitorMainPage.xaml.cs">
       <DependentUpon>VisitorMainPage.xaml</DependentUpon>
@@ -156,12 +195,40 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FrameManager.cs" />
+    <Compile Include="NavigationManager.cs" />
     <Compile Include="MatchPhotoLineManger.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AddNewMatchupForRegularSeasonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EventAdministratorMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManageMachupsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManagePlayerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManageSeasonsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ManageTeamsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MatchupDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,6 +254,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\TeamDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TeamReaportPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TechnicalAdministratorMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -58,9 +58,7 @@ namespace NBAManagement.Models
         { 
             get
             {
-                if(!RetirementTime.HasValue) return 0;
-
-                return (DateTime.Now - JoinYear).Days / 365;
+                return (new DateTime(1, 1, 1) + (DateTime.Now - JoinYear)).Year - 1;
             }
         }
         public float CurrentSeasonPPG

@@ -5,6 +5,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <converter:GameStatusConverter x:Key="gameStatusConverter"/>
+        <converter:BoolToYesNoConverter x:Key="boolToYesNoConverter"/>
         <converter:ListNumberConverter x:Key="listNumberConverter"/>
         <!--Color-->
         <SolidColorBrush x:Key="footerColor" Color="#FF6995C2"/>

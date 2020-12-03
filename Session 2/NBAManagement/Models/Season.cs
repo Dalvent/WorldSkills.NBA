@@ -36,6 +36,26 @@ namespace NBAManagement.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PostSeason> PostSeason { get; set; }
 
+        public IEnumerable<SeasonDetails> SeasonDetails
+        {
+            get 
+            {
+                var seasonDetails = new List<SeasonDetails>(3);
+
+                foreach(MatchupTypeEnum matchupType in Enum.GetValues(typeof(MatchupTypeEnum)))
+                {
+                    var matchupOfCurrentType = Matchup
+                        .Where(m => m.MatchupTypeEnum == matchupType);
+                    seasonDetails.Add(new Models.SeasonDetails() { 
+                        Season = this,
+                        SeasonType = matchupType,
+                        NumberOfMatchups = matchupOfCurrentType.Count()
+                    });
+                }
+                return seasonDetails;
+            } 
+        }       
+
         public override string ToString()
         {
             return Name;

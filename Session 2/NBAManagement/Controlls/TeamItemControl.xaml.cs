@@ -45,7 +45,7 @@ namespace NBAManagement.Controlls
         private void NavigateToDetailPage(TeamDetailPage.Tab startTab)
         {
             var page = new TeamDetailPage((Team)DataContext, startTab);
-            FrameManager.OpenPage(page);
+            NavigationManager.OpenPage(page);
         }
 
         private void Logo_Click(object sender, RoutedEventArgs e)

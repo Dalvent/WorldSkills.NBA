@@ -78,7 +78,7 @@ namespace NBAManagement.Views
         private void OpenDetails(object sender, RoutedEventArgs e)
         {
             var senderControl = (Control)sender;
-            FrameManager.OpenPage(new MatchupDetailPage((Matchup)senderControl.DataContext));
+            NavigationManager.OpenPage(new MatchupDetailPage((Matchup)senderControl.DataContext));
         }
     }
 }

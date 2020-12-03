@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NBAManagement.Views" xmlns:controlls="clr-namespace:NBAManagement.Controlls"
       mc:Ignorable="d"
-      Title="TeamsMainPage">
+      Title="Teams Main">
     <Grid Margin="5, 10, 5, 20">
         <TabControl>
             <TabItem Header="Eastern">

@@ -28,22 +28,22 @@ namespace NBAManagement.Views
 
         private void TeamsButton_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.OpenPage(new TeamsMainPage());
+            NavigationManager.OpenPage(new TeamsMainPage());
         }
 
         private void PlayersButton_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.OpenPage(new PlayersMainPage());
+            NavigationManager.OpenPage(new PlayersMainPage());
         }
 
         private void Mutchups_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.OpenPage(new MutchupListPage());
+            NavigationManager.OpenPage(new MutchupListPage());
         }
 
         private void Photos_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.OpenPage(new PhotosPage());
+            NavigationManager.OpenPage(new PhotosPage());
         }
     }
 }

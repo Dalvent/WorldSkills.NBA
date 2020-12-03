@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:NBAManagement.Views"
       xmlns:converters="clr-namespace:NBAManagement.Converter" xmlns:controlls="clr-namespace:NBAManagement.Controlls"
       mc:Ignorable="d"
-      Title="TeamDetailPage"
+      Title="Team Detail"
       Loaded="Page_Loaded">
 
     <Page.Resources>

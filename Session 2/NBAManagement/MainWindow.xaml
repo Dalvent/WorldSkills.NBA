@@ -3,9 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NBAManagement"
+        xmlns:local="clr-namespace:NBAManagement" xmlns:converter="clr-namespace:NBAManagement.Converter"
         mc:Ignorable="d"
         Title="NBAManagment" Height="700" Width="900">
+    <Window.Resources>
+        <converter:VisibilityToLogicalConverter x:Key="visibilityToLogicalConverter"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -34,7 +37,14 @@
                     Foreground="Black"
                     Style="{StaticResource TitleText}"
                     FontSize="30"/>
-
+                <Button HorizontalAlignment="Right"
+                    Name="logoutButton"
+                    Height="30px"
+                    Width="60px"
+                    Content="Logout"
+                    Template="{StaticResource RoundButtonTemplate}"
+                    Click="logoutButton_Click"
+                    Margin="0, 0 68, 1"/>
                 <Button HorizontalAlignment="Right"
                     Margin="0,0, 0, 1"
                     Height="30px"

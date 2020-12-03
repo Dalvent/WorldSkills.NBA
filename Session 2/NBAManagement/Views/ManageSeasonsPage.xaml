@@ -1,0 +1,47 @@
+﻿<Page x:Class="NBAManagement.Views.ManageSeasonsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBAManagement.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Manage Seasons">
+
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" Text="Related matchups will display in the right data grid corresponding to the clicked row in the left data grid."
+                   Margin="15" Style="{StaticResource NormalText}" HorizontalAlignment="Center"/>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource NormalText}" Text="Seasons" Margin="10"/>
+            <ComboBox x:Name="seasonComboBox" SelectionChanged="seasonComboBox_SelectionChanged"  Width="120" Margin="10"/>
+            <TextBlock Style="{StaticResource NormalText}" Text="Matchup Type" Margin="10"/>
+            <ComboBox x:Name="matchupTypeComboBox" SelectionChanged="matchupTypeComboBox_SelectionChanged"  Width="120" Margin="10"/>
+        </StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Margin="15" BorderBrush="{StaticResource darkGray}" BorderThickness="2">
+                <DataGrid x:Name="seasonDataGrid" RowHeight="40" CellStyle="{StaticResource CenterTextDataGridCellStyle}" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" AlternatingRowBackground="LightGray">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Season.Name}" Header="Season" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding SeasonType}" Header="Matchup Type" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding NumberOfMatchups}" Header="Number of Matchup" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+            <Border Grid.Column="1" Margin="15" BorderBrush="{StaticResource darkGray}" BorderThickness="2">
+                <DataGrid x:Name="mutchupsDataGrid" RowHeight="40" CellStyle="{StaticResource CenterTextDataGridCellStyle}" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" AlternatingRowBackground="LightGray">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Starttime, StringFormat={}{0:yyyy:MM:dd}}" Header="Date" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding NameAwayVSHome}" Header="Matchup" Width="2*"/>
+                        <DataGridTextColumn Binding="{Binding ResultScore}" Header="Result" Width="*"/>
+                        <DataGridTextColumn Binding="{Binding Location}" Header="Result" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </Grid>
+    </DockPanel>
+</Page>

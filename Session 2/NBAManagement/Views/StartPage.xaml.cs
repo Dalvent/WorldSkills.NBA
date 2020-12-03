@@ -49,12 +49,12 @@ namespace NBAManagement.Views
 
         private void AdminButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Not relesed now...");
+            NavigationManager.OpenPage(new LoginPage());
         }
 
         private void VisitorButton_Click(object sender, RoutedEventArgs e)
         {
-            FrameManager.OpenPage(new VisitorMainPage());
+            NavigationManager.OpenPage(new VisitorMainPage());
         }
     }
 }

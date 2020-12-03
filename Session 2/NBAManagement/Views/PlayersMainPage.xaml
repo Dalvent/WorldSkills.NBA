@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:NBAManagement.Views" xmlns:converter="clr-namespace:NBAManagement.Converter"
       mc:Ignorable="d" 
       d:DesignHeight="450"
-      Title="PlayersMainPage">
+      Title="Players Main">
     <Page.Resources>
         <converter:NumDivisionConverter x:Key="numDivisionConverter"/>
         <Style TargetType="Button" x:Key="FilterLetter">

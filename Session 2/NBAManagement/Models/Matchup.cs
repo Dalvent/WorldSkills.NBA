@@ -17,45 +17,54 @@ namespace NBAManagement.Models
             MatchupLog = new HashSet<MatchupLog>();
             PlayerStatistics = new HashSet<PlayerStatistics>();
         }
-
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
         public int MatchupId { get; set; }
-
         public int SeasonId { get; set; }
-
         public int MatchupTypeId { get; set; }
-
         public int Team_Away { get; set; }
-
         public int Team_Home { get; set; }
-
         public DateTime Starttime { get; set; }
-
         public int Team_Away_Score { get; set; }
-
         public int Team_Home_Score { get; set; }
-
         [Required]
         [StringLength(200)]
         public string Location { get; set; }
-
         public int Status { get; set; }
-
-        public string ResultString => $"{Team_Away_Score}-{Team_Home_Score}";
-
         [StringLength(50)]
         public string CurrentQuarter { get; set; }
-
         public virtual MatchupType MatchupType { get; set; }
-
         public virtual Season Season { get; set; }
-
         public virtual Team TeamAway { get; set; }
-
         public virtual Team TeamHome { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MatchupDetail> MatchupDetail { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MatchupLog> MatchupLog { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PlayerStatistics> PlayerStatistics { get; set; }
+        
+        public MatchupTypeEnum MatchupTypeEnum
+        {
+            get
+            {
+                switch(MatchupTypeId)
+                {
+                case 0:  return MatchupTypeEnum.Preseason;
+                case 1:  return MatchupTypeEnum.Regular;
+                default: return MatchupTypeEnum.Post;
+                }
+            }
+        }
+        public int CompareTo(object obj)
+        {
+            return Starttime.CompareTo(((Matchup)obj).Starttime);
+        }
+        public string ResultString => $"{Team_Away_Score}-{Team_Home_Score}";
+        public bool IsFinished => Status == 1;
+        public string NameAwayVSHome => $"{TeamAway.TeamName} vs {TeamHome.TeamName}";
+        public string ResultScore => $"{Team_Away_Score}-{Team_Home_Score}";
         public IEnumerable<MatchupDetail> FullDetails 
         { 
             get
@@ -71,18 +80,6 @@ namespace NBAManagement.Models
                 return matchupDetails;
             }
         }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MatchupLog> MatchupLog { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PlayerStatistics> PlayerStatistics { get; set; }
-
-        public int CompareTo(object obj)
-        {
-            return Starttime.CompareTo(((Matchup)obj).Starttime);
-        }
-
         public IEnumerable<PlayerStatistics> AwayPlayerStatistics
         {
             get
@@ -90,10 +87,8 @@ namespace NBAManagement.Models
                 return PlayerStatistics.Where(s => s.Team == TeamAway);
             }
         }
-
         public IEnumerable<PlayerStatistics> TeamAwayStarters => AwayPlayerStatistics.Where(s => s.IsStarting == 1);
         public IEnumerable<PlayerStatistics> TeamHomeStarters => HomePlayerStatistics.Where(s => s.IsStarting == 1);
-
         public IEnumerable<PlayerStatistics> HomePlayerStatistics
         {
             get
@@ -113,7 +108,6 @@ namespace NBAManagement.Models
             $"{AwayPlayerStatistics.Sum(s => s.FreeThrowMade)}-{AwayPlayerStatistics.Sum(s => s.FreeThrowMissed)}";
         public string TeamHomeFreeThrow =>
             $"{HomePlayerStatistics.Sum(s => s.FreeThrowMade)}-{AwayPlayerStatistics.Sum(s => s.FreeThrowMissed)}";
-
         public int TeamAwayFGMadeAttemptedMade => AwayPlayerStatistics.Sum(s => s.FieldGoalMade);
         public int TeamHomeFGMadeAttemptedMade => HomePlayerStatistics.Sum(s => s.FieldGoalMade);
         public int TeamAwayC3PointFieldGoalMade => AwayPlayerStatistics.Sum(s => s.C3_PointFieldGoalMade);
@@ -126,7 +120,6 @@ namespace NBAManagement.Models
         public int TeamHomeC3PointFieldGoalMissed => HomePlayerStatistics.Sum(s => s.C3_PointFieldGoalMissed);
         public int TeamAwayFreeThrowMissed => AwayPlayerStatistics.Sum(s => s.FreeThrowMissed);
         public int TeamHomeFreeThrowMissed => HomePlayerStatistics.Sum(s => s.FreeThrowMissed);
-
         public int TeamAwayRebounds => AwayPlayerStatistics.Sum(s => s.Rebound);
         public int TeamHomeRebounds => HomePlayerStatistics.Sum(s => s.Rebound);
         public int TeamAwayAssists => AwayPlayerStatistics.Sum(s => s.Assist);
@@ -137,7 +130,6 @@ namespace NBAManagement.Models
         public int TeamHomeBlocks => HomePlayerStatistics.Sum(s => s.Block);
         public int TeamAwayTurnovers => AwayPlayerStatistics.Sum(s => s.Turnover);
         public int TeamHomeTurnovers => HomePlayerStatistics.Sum(s => s.Turnover);
-
         public double TeamAwayFGPersent => ((double)TeamAwayFGMadeAttemptedMade) / 
             (TeamAwayFGMadeAttemptedMade + TeamAwayFGMadeAttemptedMissed) * 100.0;
         public double TeamHomeFGPersent => ((double)TeamHomeFGMadeAttemptedMade) / 

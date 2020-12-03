@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:NBAManagement.Views" xmlns:models="clr-namespace:NBAManagement.Models" xmlns:charting="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MatchupDetailPage">
+      Title="Matchup Detail">
 
     <Grid>
         <Grid.RowDefinitions>

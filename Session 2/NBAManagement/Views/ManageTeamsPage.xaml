@@ -1,0 +1,48 @@
+﻿<Page x:Class="NBAManagement.Views.ManageTeamsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBAManagement.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450"
+      Title="Manage Teams">
+
+    <Grid>
+        <DockPanel>
+            <Grid DockPanel.Dock="Top">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Conference:" Style="{StaticResource NormalText}" FontSize="12" VerticalAlignment="Center" Margin="5"/>
+                    <ComboBox x:Name="conferenceComboBox" SelectionChanged="conferenceComboBox_SelectionChanged" Width="120" Margin="5, 5, 15, 5"/>
+                    <TextBlock Text="Division:" Style="{StaticResource NormalText}" FontSize="12" VerticalAlignment="Center" Margin="5"/>
+                    <ComboBox x:Name="divisionComboBox" SelectionChanged="divisionComboBox_SelectionChanged" Width="120" Margin="5, 5, 15, 5"/>
+                    <TextBlock Text="Name:" Style="{StaticResource NormalText}" FontSize="12" VerticalAlignment="Center" Margin="5"/>
+                    <TextBox x:Name="nameTextBox" Width="120" Margin="5, 5, 15, 5"/>
+                    <Button x:Name="searchButton" Click="searchButton_Click"  Template="{StaticResource RoundButtonTemplate}" Width="60" Height="20" Content="Search" Foreground="{StaticResource darkGray}" FontSize="12px"/>
+                </StackPanel>
+                <Button x:Name="addNewTeamButton" Click="addNewTeamButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Template="{StaticResource RoundButtonTemplate}" Width="120" Height="20" Content="+Add a new team" Foreground="{StaticResource darkGray}" FontSize="12px"/>
+            </Grid>
+            <Border Margin="10" BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" Text="{Binding FilteredCount, StringFormat={}Total teams: {0}}" Style="{StaticResource NormalText}"/>
+                    <DataGrid x:Name="teamDataGrid" ItemsSource="{Binding Filtered}" GridLinesVisibility="Horizontal" Margin="10" CellStyle="{StaticResource CenterTextDataGridCellStyle}" RowHeight="125" IsReadOnly="True" AutoGenerateColumns="False" AlternatingRowBackground="LightGray">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding Logo}" Margin="3"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Binding="{Binding TeamName}" Header="Name" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Division.Conference.Name}" Header="Conference" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Division.Name}" Header="Division" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Coach}" Header="Coach" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding CurrentSeasonTotalSlary}" Header="Coach" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Border>
+        </DockPanel>
+    </Grid>
+</Page>

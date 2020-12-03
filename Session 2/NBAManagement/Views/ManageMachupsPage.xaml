@@ -1,0 +1,80 @@
+﻿<Page x:Class="NBAManagement.Views.ManageMachupsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBAManagement.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Manage Machups"
+      IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid>
+        <TabControl Margin="5, 20, 5, 40">
+            <TabItem Header="Preseason" Width="100" Height="23" TextBlock.TextAlignment="Center" Padding="4" BorderBrush="{StaticResource darkGray}" >
+                <Grid>
+                    <DataGrid Margin="5, 40" Name="preseasonDataGrid" AutoGenerateColumns="False" MinRowHeight="20" CellStyle="{StaticResource CenterTextDataGridCellStyle}" IsReadOnly="True" AlternatingRowBackground="LightGray">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Starttime, StringFormat={}{0:yyyy/MM/dd}}" Header="Data" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding TeamAway.TeamName}" Header="Team(Away)" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding TeamHome.TeamName}" Header="Team(Home)" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Starttime, StringFormat={}{0:hh:mm}}" Header="Time" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Location}" Header="Location" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding IsFinished, Converter={StaticResource boolToYesNoConverter}}" Header="Finished" Width="*"/>
+                            <DataGridTemplateColumn Header="Update" Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="updateEntityButton" Width="80" Height="30" Content="Update" Click="updateEntityButton_Click" Template="{StaticResource RoundButtonTemplate}" Margin="6"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Delete" Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="deleteEntityButton" Width="80" Height="30" Content="Delete" Click="deleteEntityButton_Click" Template="{StaticResource RoundButtonTemplate}" Margin="6"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Regular Season" Width="100" Height="23" TextBlock.TextAlignment="Center" Padding="4" BorderBrush="{StaticResource darkGray}" >
+                <Grid>
+                    <Button x:Name="addNewMatchup" Click="addNewMatchup_Click" Content="+Add new matchup"  Margin="7" Template="{StaticResource RoundButtonTemplate}" Width="170" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    <DataGrid Margin="5, 40" Name="regularDataGrid" AutoGenerateColumns="False" RowHeight="20" CellStyle="{StaticResource CenterTextDataGridCellStyle}" IsReadOnly="False" AlternatingRowBackground="LightGray">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding Starttime, StringFormat={}{0:yyyy/MM/dd}}" Header="Data" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding TeamAway.TeamName}" Header="Team(Away)" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding TeamHome.TeamName}" Header="Team(Home)" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Starttime, StringFormat={}{0:hh:mm}}" Header="Time" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding Location}" Header="Location" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding IsFinished, Converter={StaticResource boolToYesNoConverter}}" Header="Finished" Width="*"/>
+                            <DataGridTemplateColumn Header="Update" Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="updateEntityButton" Width="80" Height="30" Content="Update" Click="updateEntityButton_Click" Template="{StaticResource RoundButtonTemplate}" Margin="6"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Delete" Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button x:Name="deleteEntityButton" Width="80" Height="30" Content="Delete" Click="deleteEntityButton_Click" Template="{StaticResource RoundButtonTemplate}" Margin="6"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="exportToExcelButton" Click="exportToExcelButton_Click" Content="Export to Excel" Margin="7" Template="{StaticResource RoundButtonTemplate}" Width="120" Height="25" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0, 15">
+            <ComboBox x:Name="seasonFilterComboBox" Width="100"/>
+            <CheckBox x:Name="currentDataFilterCheckBox" VerticalAlignment="Center" Margin="10, 0, 4, 0"/>
+            <DatePicker x:Name="currentDateFilterDatePicker" Width="120" Margin="0, 0, 10, 0"/>
+            <Button x:Name="searchButton" Click="searchButton_Click" Template="{StaticResource RoundButtonTemplate}" Width="70" Content="Search"/>
+        </StackPanel>
+    </Grid>
+</Page>
