@@ -37,8 +37,7 @@ namespace NBAManagement
             InitializeComponent();
             mainFrame.Navigating += OnNavigating;
             NavigationManager.Init(mainFrame);
-            nbaFooterText.Text = GenerateNbaFooterText();
-            var i = NBAContext.Instance.PlayerStatistics.ToArray();
+            //nbaFooterText.Text = GenerateNbaFooterText();
         }
 
         public string GenerateNbaFooterText()

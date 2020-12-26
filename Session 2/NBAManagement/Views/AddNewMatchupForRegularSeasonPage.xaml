@@ -12,7 +12,7 @@
     </Page.Resources>
     <Grid>
         <StackPanel>
-            <Border Margin="5, 15" VerticalAlignment="Top" BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+            <Border Margin="5, 15" VerticalAlignment="Top" BorderBrush="{StaticResource DarkGray}" BorderThickness="1">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -56,7 +56,7 @@
                     </Grid>
                 </StackPanel>
             </Border>
-            <Button Name="submitButton" Click="submitButton_Click" Template="{StaticResource RoundButtonTemplate}" Width="80" Height="25" Content="Submit" Foreground="{StaticResource darkGray}" FontSize="14" BorderBrush="{StaticResource darkGray}" BorderThickness="1"/>
+            <Button Name="submitButton" Click="submitButton_Click" Template="{StaticResource RoundButtonTemplate}" Width="80" Height="25" Content="Submit" Foreground="{StaticResource DarkGray}" FontSize="14" BorderBrush="{StaticResource DarkGray}" BorderThickness="1"/>
         </StackPanel>
     </Grid>
 </Page>

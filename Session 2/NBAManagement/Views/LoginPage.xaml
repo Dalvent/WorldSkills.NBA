@@ -11,20 +11,20 @@
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30, 30" Name="mainPanel">
         <TextBlock Text="Users can login into the system using their jobnumber and password." Style="{StaticResource NormalText}" Margin="10, 10, 10, 60"/>
         <DockPanel>
-            <TextBlock Text="Jobnumber" Width="80" Style="{StaticResource NormalText}" Foreground="{StaticResource darkGray}" Margin="5" VerticalAlignment="Center"/>
+            <TextBlock Text="Jobnumber" Width="80" Style="{StaticResource NormalText}" Foreground="{StaticResource DarkGray}" Margin="5" VerticalAlignment="Center"/>
             <TextBox x:Name="jobnumberBox" Padding="4" Margin="5" Height="28"/>
         </DockPanel>
         <DockPanel>
-            <TextBlock Text="Password" Width="80" Style="{StaticResource NormalText}" Foreground="{StaticResource darkGray}" Margin="5" VerticalAlignment="Center"/>
+            <TextBlock Text="Password" Width="80" Style="{StaticResource NormalText}" Foreground="{StaticResource DarkGray}" Margin="5" VerticalAlignment="Center"/>
             <PasswordBox x:Name="passwordBox" Padding="4" Margin="5" Height="28"/>
         </DockPanel>
-        <CheckBox Name="rememberMeComboBox" Content="Remember me" Margin="30" Foreground="{StaticResource darkGray}"/>
+        <CheckBox Name="rememberMeComboBox" Content="Remember me" Margin="30" Foreground="{StaticResource DarkGray}"/>
         <Grid>
             <Button x:Name="loginButton" Click="loginButton_Click" Content="Login" HorizontalAlignment="Left" Width="80" Height="30" Template="{StaticResource RoundButtonTemplate}" Margin="10"/>
             <Button x:Name="cancelButton" Click="cancelButton_Click" Content="Cancel" HorizontalAlignment="Right" Width="80" Height="30" Template="{StaticResource RoundButtonTemplate}" Margin="10"/>
         </Grid>
         <Popup x:Name="chooseAdminTypePoput" AllowsTransparency="True" Focusable="True" PopupAnimation="Fade" Placement="Center" PlacementTarget="{Binding ElementName=mainPanel}">
-            <Border Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="3" BorderBrush="{StaticResource darkGray}" Background="White">
+            <Border Width="400" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="3" BorderBrush="{StaticResource DarkGray}" Background="White">
                 <StackPanel>
                     <Button x:Name="closeChooseAdminTypePoput" Click="closeChooseAdminTypePoput_Click" HorizontalAlignment="Right" Content="X" Width="20" Margin="3" Foreground="DarkRed"/>
                     <TextBlock Text="FOR TESTING ONLY!" FontWeight="Bold" FontStyle="Italic" Foreground="#FFBF9000" TextAlignment="Center" FontSize="22px" Margin="10"/>

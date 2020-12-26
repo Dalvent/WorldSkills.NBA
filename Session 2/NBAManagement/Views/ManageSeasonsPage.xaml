@@ -23,7 +23,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Column="0" Margin="15" BorderBrush="{StaticResource darkGray}" BorderThickness="2">
+            <Border Grid.Column="0" Margin="15" BorderBrush="{StaticResource DarkGray}" BorderThickness="2">
                 <DataGrid x:Name="seasonDataGrid" RowHeight="40" CellStyle="{StaticResource CenterTextDataGridCellStyle}" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" AlternatingRowBackground="LightGray">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding Season.Name}" Header="Season" Width="*"/>
@@ -32,7 +32,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
             </Border>
-            <Border Grid.Column="1" Margin="15" BorderBrush="{StaticResource darkGray}" BorderThickness="2">
+            <Border Grid.Column="1" Margin="15" BorderBrush="{StaticResource DarkGray}" BorderThickness="2">
                 <DataGrid x:Name="mutchupsDataGrid" RowHeight="40" CellStyle="{StaticResource CenterTextDataGridCellStyle}" AutoGenerateColumns="False" IsReadOnly="True" Margin="10" AlternatingRowBackground="LightGray">
                     <DataGrid.Columns>
                         <DataGridTextColumn Binding="{Binding Starttime, StringFormat={}{0:yyyy:MM:dd}}" Header="Date" Width="*"/>

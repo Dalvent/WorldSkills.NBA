@@ -16,9 +16,9 @@
             <ComboBox x:Name="postionComboBox" Width="120" Margin="10" VerticalAlignment="Center" Height="22"/>
             <TextBlock Text="Country:" Style="{StaticResource NormalText}" Margin="25, 10, 10, 10" VerticalAlignment="Center"/>
             <ComboBox x:Name="countryComboBox" Width="120" Margin="10" VerticalAlignment="Center" Height="22"/>
-            <Button x:Name="searchButton" Template="{StaticResource RoundButtonTemplate}" Click="searchButton_Click" Height="22" Width="75" Content="Search" Foreground="{StaticResource darkGray}" FontSize="14" Margin="20, 10"/>
+            <Button x:Name="searchButton" Template="{StaticResource RoundButtonTemplate}" Click="searchButton_Click" Height="22" Width="75" Content="Search" Foreground="{StaticResource DarkGray}" FontSize="14" Margin="20, 10"/>
         </StackPanel>
-        <Border BorderBrush="{StaticResource darkGray}" BorderThickness="1" Margin="5">
+        <Border BorderBrush="{StaticResource DarkGray}" BorderThickness="1" Margin="5">
             <DockPanel>
                 <TextBlock DockPanel.Dock="Top" x:Name="countTextBlock" HorizontalAlignment="Center" Style="{StaticResource NormalText}" Margin="25, 10, 10, 10" VerticalAlignment="Center"/>
                 <DataGrid RowHeight="30" ColumnHeaderHeight="30" CellStyle="{StaticResource CenterTextDataGridCellStyle}"  AutoGenerateColumns="False" IsReadOnly="True" AlternatingRowBackground="LightGray" x:Name="playerDataGrid">

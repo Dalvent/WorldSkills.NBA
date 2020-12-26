@@ -1,5 +1,5 @@
-﻿using NBAManagement.ViewModels;
-using NBAManagement.Views;
+﻿using NBAManagement.Models;
+using NBAManagement.Filter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,18 +14,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NBAManagement.ViewModels;
 
 namespace NBAManagement.Views
 {
     /// <summary>
-    /// Interaction logic for VisitorMainPage.xaml
+    /// Interaction logic for TeamDetailPage.xaml
     /// </summary>
-    public partial class VisitorMainPage : Page
+    public partial class TeamDetailView : Page
     {
-        public VisitorMainPage()
+        public enum Tab 
+        {
+            Roster, 
+            Matchup,
+            FirstLineUp
+        }
+        public TeamDetailView(Team team, Tab startTab)
         {
             InitializeComponent();
-            DataContext = new VisitorMainViewModel();
+
+            MainTabControl.SelectedIndex = (int)startTab;
+            DataContext = new TeamDetailViewModel(team);
         }
     }
 }

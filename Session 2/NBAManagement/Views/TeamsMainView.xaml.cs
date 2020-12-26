@@ -2,7 +2,6 @@
 using NBAManagement.ViewModels;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,18 +18,27 @@ using System.Windows.Shapes;
 namespace NBAManagement.Views
 {
     /// <summary>
-    /// Interaction logic for StartPage.xaml
+    /// Interaction logic for TeamsMainPage.xaml
     /// </summary>
-    public partial class StartPage : Page
+    public partial class TeamsMainView : Page
     {
-        public StartPage()
+        public TeamsMainView()
         {
             InitializeComponent();
         }
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            DataContext = await Task.Run(() => new StartViewModel());
+            try
+            {
+                var viewModel = await Task.Run(() => TeamsMainViewModel.Create());
+                DataContext = viewModel;
+            }
+            catch
+            {
+                MessageBox.Show("Не удалось загрузить данные из базы данных");
+                NavigationManager.GoBack();
+            }
         }
     }
 }

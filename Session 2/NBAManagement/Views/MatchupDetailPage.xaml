@@ -30,8 +30,8 @@
                 <TextBlock HorizontalAlignment="Center"
                            Height="25"
                            Margin="10"
-                           Text="{Binding Status, Converter={StaticResource gameStatusConverter}}"
-                           Style="{StaticResource statusBlock}"/>
+                           Text="{Binding Status, Converter={StaticResource GameStatusConverter}}"
+                           Style="{StaticResource StatusBlock}"/>
             </StackPanel>
             <TextBlock VerticalAlignment="Center" Style="{StaticResource NormalText}" FontSize="20px" Text="{Binding Team_Home_Score}" Margin="10"/>
             <Image Height="80" Width="80" Source="{Binding TeamHome.Logo}"/>
@@ -48,7 +48,7 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <Border Margin="10" BorderThickness="1" Grid.RowSpan="2" BorderBrush="{StaticResource darkGray}">
+                    <Border Margin="10" BorderThickness="1" Grid.RowSpan="2" BorderBrush="{StaticResource DarkGray}">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="2*"/>
@@ -66,15 +66,15 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Border Grid.Row="0" Grid.ColumnSpan="3" BorderBrush="{StaticResource darkGray}" Background="White" BorderThickness="1"/>
-                            <Border Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="{StaticResource darkGray}" Background="LightGray" BorderThickness="1"/>
-                            <Border Grid.Row="2" Grid.ColumnSpan="3" BorderBrush="{StaticResource darkGray}" Background="White" BorderThickness="1"/>
-                            <Border Grid.Row="3" Grid.ColumnSpan="3" BorderBrush="{StaticResource darkGray}" Background="LightGray" BorderThickness="1"/>
-                            <Border Grid.Row="4" Grid.ColumnSpan="3" BorderBrush="{StaticResource darkGray}" Background="White" BorderThickness="1"/>
-                            <Border Grid.Row="5" Grid.ColumnSpan="3" BorderBrush="{StaticResource darkGray}" Background="LightGray" BorderThickness="1"/>
-                            <Border Grid.Row="6" Grid.ColumnSpan="3" BorderBrush="{StaticResource darkGray}" Background="White" BorderThickness="1"/>
-                            <Border Grid.Row="7" Grid.ColumnSpan="3" BorderBrush="{StaticResource darkGray}" Background="LightGray" BorderThickness="1"/>
-                            <Border Grid.Row="8" Grid.ColumnSpan="3" BorderBrush="{StaticResource darkGray}" Background="White" BorderThickness="1"/>
+                            <Border Grid.Row="0" Grid.ColumnSpan="3" BorderBrush="{StaticResource DarkGray}" Background="White" BorderThickness="1"/>
+                            <Border Grid.Row="1" Grid.ColumnSpan="3" BorderBrush="{StaticResource DarkGray}" Background="LightGray" BorderThickness="1"/>
+                            <Border Grid.Row="2" Grid.ColumnSpan="3" BorderBrush="{StaticResource DarkGray}" Background="White" BorderThickness="1"/>
+                            <Border Grid.Row="3" Grid.ColumnSpan="3" BorderBrush="{StaticResource DarkGray}" Background="LightGray" BorderThickness="1"/>
+                            <Border Grid.Row="4" Grid.ColumnSpan="3" BorderBrush="{StaticResource DarkGray}" Background="White" BorderThickness="1"/>
+                            <Border Grid.Row="5" Grid.ColumnSpan="3" BorderBrush="{StaticResource DarkGray}" Background="LightGray" BorderThickness="1"/>
+                            <Border Grid.Row="6" Grid.ColumnSpan="3" BorderBrush="{StaticResource DarkGray}" Background="White" BorderThickness="1"/>
+                            <Border Grid.Row="7" Grid.ColumnSpan="3" BorderBrush="{StaticResource DarkGray}" Background="LightGray" BorderThickness="1"/>
+                            <Border Grid.Row="8" Grid.ColumnSpan="3" BorderBrush="{StaticResource DarkGray}" Background="White" BorderThickness="1"/>
                             <Image Source="{Binding TeamAway.Logo}" Grid.Column="1" Margin="-10, 3, 0, 3"/>
                             <Image Source="{Binding TeamHome.Logo}" Grid.Column="2" Margin="-10, 3, 0, 3"/>
                             <TextBlock Grid.Row="1" Text="FG Made-Attempted" VerticalAlignment="Center" Margin="10, 0, 0, 0" Style="{StaticResource NormalText}"/>
@@ -103,7 +103,7 @@
                             <TextBlock Grid.Row="8" Grid.Column="2" Text="{Binding TeamHomeTurnovers}" VerticalAlignment="Center" Style="{StaticResource NormalText}"/>
                         </Grid>
                     </Border>
-                    <Border Grid.Row="0" Grid.Column="1" Margin="10" BorderThickness="1" BorderBrush="{StaticResource darkGray}">
+                    <Border Grid.Row="0" Grid.Column="1" Margin="10" BorderThickness="1" BorderBrush="{StaticResource DarkGray}">
                         <Grid>
                             <TextBlock Text="Field Goal %" Style="{StaticResource NormalText}" Margin="10"/>
                             <StackPanel Margin="10, 30, 10, 10">
@@ -130,7 +130,7 @@
                             </StackPanel>
                         </Grid>
                     </Border>
-                    <Border Grid.Row="1" Grid.Column="1" Margin="10" BorderThickness="1" BorderBrush="{StaticResource darkGray}">
+                    <Border Grid.Row="1" Grid.Column="1" Margin="10" BorderThickness="1" BorderBrush="{StaticResource DarkGray}">
                         <Grid>
                             <TextBlock Text="Three Points %" Style="{StaticResource NormalText}" Margin="10"/>
                             <StackPanel Margin="10, 30, 10, 10">
@@ -164,7 +164,7 @@
                     
                     <Image Source="/NBAManagement;component/Resources/court-transparent.png" Stretch="Fill"/>
                     <Image Source="{Binding TeamHome.Logo}" Width="80" Height="80"/>
-                    <Border Width="230" Height="280" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80, 0, 0, 0" BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+                    <Border Width="230" Height="280" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="80, 0, 0, 0" BorderBrush="{StaticResource DarkGray}" BorderThickness="1">
                         <StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="{Binding TeamAway.Logo}" Width="50" Height="50" Margin="4, 0"/>
@@ -192,7 +192,7 @@
                             </ListView>
                         </StackPanel>
                     </Border>
-                    <Border Width="230" Height="280" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0, 0, 80, 0" BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+                    <Border Width="230" Height="280" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0, 0, 80, 0" BorderBrush="{StaticResource DarkGray}" BorderThickness="1">
                         <StackPanel>
                             <StackPanel Orientation="Horizontal">
                             <Image Source="{Binding TeamHome.Logo}" Width="50" Height="50" Margin="4, 0"/>

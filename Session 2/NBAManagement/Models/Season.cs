@@ -10,7 +10,6 @@ namespace NBAManagement.Models
     [Table("Season")]
     public partial class Season
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Season()
         {
             Matchup = new HashSet<Matchup>();
@@ -18,7 +17,7 @@ namespace NBAManagement.Models
             PostSeason = new HashSet<PostSeason>();
         }
 
-        public static Season LastSeason => NBAContext.Instance.Season.ToList().Last();
+        public static Season LastSeason { get; } = NBAContext.Instance.Season.ToList().Last();
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SeasonId { get; set; }
@@ -26,14 +25,8 @@ namespace NBAManagement.Models
         [Required]
         [StringLength(50)]
         public string Name { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Matchup> Matchup { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PlayerInTeam> PlayerInTeam { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PostSeason> PostSeason { get; set; }
 
         public IEnumerable<SeasonDetails> SeasonDetails

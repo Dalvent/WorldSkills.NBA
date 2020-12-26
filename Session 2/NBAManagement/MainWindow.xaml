@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <Border x:Name="Header"
             Visibility="Hidden"
-            BorderBrush="{StaticResource footerColor}"
+            BorderBrush="{StaticResource FooterColor}"
             BorderThickness="0, 0, 0, 1">
             <Grid Margin="4">
                 <StackPanel HorizontalAlignment="Left" 
@@ -60,7 +60,7 @@
             Source="/NBAManagement;component/Views/StartPage.xaml">
         </Frame> 
         
-        <Border Grid.Row="2" Background="{StaticResource footerColor}">
+        <Border Grid.Row="2" Background="{StaticResource FooterColor}">
             <TextBlock x:Name="nbaFooterText"
                 Foreground="White"
                 HorizontalAlignment="Center"/>

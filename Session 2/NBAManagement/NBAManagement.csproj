@@ -72,11 +72,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Command\ActionCommand.cs" />
     <Compile Include="Controlls\LineupListControl.xaml.cs">
       <DependentUpon>LineupListControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controlls\TeamItemControl.xaml.cs">
-      <DependentUpon>TeamItemControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Converter\BoolToYesNoConverter.cs" />
     <Compile Include="Converter\MatchupTypeEnumConverter.cs" />
@@ -90,6 +88,7 @@
     <Compile Include="LoginInvalidException.cs" />
     <Compile Include="Models\ActionType.cs" />
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\ChartPoint.cs" />
     <Compile Include="Models\Conference.cs" />
     <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Division.cs" />
@@ -103,6 +102,7 @@
     <Compile Include="Models\Pictures.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\PlayerInTeam.cs" />
+    <Compile Include="Models\PlayerStatisticCharPoint.cs" />
     <Compile Include="Models\PlayerStatistics.cs" />
     <Compile Include="Models\PositionName.cs" />
     <Compile Include="Models\PostSeason.cs" />
@@ -123,6 +123,15 @@
     <Compile Include="Filter\PlayerStatisticDateIntervalFilter.cs" />
     <Compile Include="Filter\StringContainsFilter.cs" />
     <Compile Include="Models\TeamReport.cs" />
+    <Compile Include="ViewModels\PlayerDetailViewModel.cs" />
+    <Compile Include="ViewModels\PlayersMainViewModel.cs" />
+    <Compile Include="ViewModels\PlayerInTeamViewModel.cs" />
+    <Compile Include="ViewModels\SeasonViewModel.cs" />
+    <Compile Include="ViewModels\StartViewModel.cs" />
+    <Compile Include="ViewModels\TeamDetailViewModel.cs" />
+    <Compile Include="ViewModels\TeamsMainViewModel.cs" />
+    <Compile Include="ViewModels\TeamViewModel.cs" />
+    <Compile Include="ViewModels\VisitorMainViewModel.cs" />
     <Compile Include="Views\AddNewMatchupForRegularSeasonPage.xaml.cs">
       <DependentUpon>AddNewMatchupForRegularSeasonPage.xaml</DependentUpon>
     </Compile>
@@ -153,8 +162,8 @@
     <Compile Include="Views\PhotosPage.xaml.cs">
       <DependentUpon>PhotosPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\PlayerDetail.xaml.cs">
-      <DependentUpon>PlayerDetail.xaml</DependentUpon>
+    <Compile Include="Views\PlayerDetailView.xaml.cs">
+      <DependentUpon>PlayerDetailView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\PlayersMainPage.xaml.cs">
       <DependentUpon>PlayersMainPage.xaml</DependentUpon>
@@ -162,8 +171,8 @@
     <Compile Include="Views\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TeamDetailPage.xaml.cs">
-      <DependentUpon>TeamDetailPage.xaml</DependentUpon>
+    <Compile Include="Views\TeamDetailView.xaml.cs">
+      <DependentUpon>TeamDetailView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TeamReaportPage.xaml.cs">
       <DependentUpon>TeamReaportPage.xaml</DependentUpon>
@@ -174,16 +183,12 @@
     <Compile Include="Views\VisitorMainPage.xaml.cs">
       <DependentUpon>VisitorMainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TeamsMainPage.xaml.cs">
-      <DependentUpon>TeamsMainPage.xaml</DependentUpon>
+    <Compile Include="Views\TeamsMainView.xaml.cs">
+      <DependentUpon>TeamsMainView.xaml</DependentUpon>
     </Compile>
     <Compile Include="RadioBackgroundControlHighlighter.cs" />
     <Compile Include="RadioForegroundControlHighlighter.cs" />
     <Page Include="Controlls\LineupListControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controlls\TeamItemControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -241,7 +246,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\PlayerDetail.xaml">
+    <Page Include="Views\PlayerDetailView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -253,7 +258,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\TeamDetailPage.xaml">
+    <Page Include="Views\TeamDetailView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -269,7 +274,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\TeamsMainPage.xaml">
+    <Page Include="Views\TeamsMainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -327,5 +332,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

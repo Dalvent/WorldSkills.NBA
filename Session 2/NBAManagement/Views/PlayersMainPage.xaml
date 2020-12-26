@@ -1,4 +1,4 @@
-﻿<Page x:Class="NBAManagement.Views.PlayersMainPage"
+﻿<Page x:Class="NBAManagement.Views.PlayersMainView"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,7 +8,9 @@
       d:DesignHeight="450"
       Title="Players Main">
     <Page.Resources>
-        <converter:NumDivisionConverter x:Key="numDivisionConverter"/>
+        <SolidColorBrush x:Key="ButtonStandartColor" Color="White"/>
+        <SolidColorBrush x:Key="ButtonHighlightColor" Color="Yellow"/>
+        <converter:NumDivisionConverter x:Key="NumDivisionConverter"/>
         <Style TargetType="Button" x:Key="FilterLetter">
             <Setter Property="Template">
                 <Setter.Value>
@@ -35,134 +37,56 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <Grid Background="{StaticResource footerColor}">
+        <Grid Background="{StaticResource FooterColor}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="AllLettersButton_Click"
-                        Content="ALL"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="A"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="B"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="C"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="D"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="E"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="F"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="G"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="H"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="I"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="J"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="K"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="L"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="M"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="N"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="O"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="P"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="Q"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="R"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="S"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="T"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="U"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="V"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="W"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="X"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="Y"/>
-                <Button Style="{StaticResource FilterLetter}" 
-                        Click="LetterButton_Click"
-                        Content="Z"/>
+                <Button x:Name="FirstCharInNameFilterAllButton" Command="{Binding SetFirstCharInNameFilterAll}" Content="ALL" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterA}" Content="A" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterB}" Content="B" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterC}" Content="C" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterD}" Content="D" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterE}" Content="E" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterF}" Content="F" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterG}" Content="G" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterH}" Content="H" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterI}" Content="I" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterJ}" Content="J" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterK}" Content="K" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterL}" Content="L" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterM}" Content="M" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterN}" Content="N" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterP}" Content="P" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterQ}" Content="Q" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterR}" Content="R" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterS}" Content="S" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterT}" Content="T" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterU}" Content="U" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterV}" Content="V" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterW}" Content="W" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterX}" Content="X" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterY}" Content="Y" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
+                <Button Command="{Binding SetFirstCharInNameFilterZ}" Content="Z" Style="{StaticResource FilterLetter}" Click="OnSetFirstCharInNameFilterClick"/>
             </StackPanel>
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <TextBlock Text="Season" Style="{StaticResource PageHeaderText}"/>
-                <ComboBox x:Name="seasonComboBox"  
-                          Margin="3, 6, 50, 6" 
-                          Width="140" 
-                          SelectedIndex="0"
-                          SelectionChanged="seasonComboBox_SelectionChanged"/>
+                <ComboBox ItemsSource="{Binding Seasons}" Padding="5" SelectedItem="{Binding Path=FilterSeason, Mode=TwoWay}" Margin="3, 6, 50, 6" Width="140" IsSynchronizedWithCurrentItem="True"/>
                 <TextBlock Text="Team" Style="{StaticResource PageHeaderText}"/>
-                <ComboBox x:Name="teamComboBox"
-                          Margin="3, 6, 50, 6"
-                          Width="140"
-                          SelectionChanged="teamComboBox_SelectionChanged"
-                          SelectedIndex="0"/>
+                <ComboBox ItemsSource="{Binding Teams}" Padding="5" SelectedItem="{Binding Path=FilterTeam, Mode=TwoWay}" Margin="3, 6, 50, 6" Width="140" IsSynchronizedWithCurrentItem="True"/>
                 <TextBlock Text="Playername" Style="{StaticResource PageHeaderText}"/>
-                <TextBox x:Name="playerNameTextBox" Margin="3, 6, 50, 6" Width="140" TextChanged="playerNameTextBox_TextChanged"/>
+                <TextBox x:Name="playerNameTextBox" Foreground="{StaticResource DarkGray}" Padding="5" Text="{Binding FilterName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="3, 6, 50, 6" Width="140"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
-            <DataGrid ItemsSource="{Binding PlayersOnPage}"
-                      HorizontalScrollBarVisibility="Disabled"
-                      VerticalScrollBarVisibility="Disabled"
-                      AutoGenerateColumns="False" 
-                      IsReadOnly="True"
-                      CellStyle="{StaticResource CenterTextDataGridCellStyle}"
-                      RowHeight="40"
-                      x:Name="playersDataGrid"
-                      Margin="6"
-                      SelectedCellsChanged="playersDataGrid_SelectedCellsChanged"
-                      MinRowHeight="{Binding 
-                                    ElementName=playersDataGrid,
-                                    Path=ActualHeight,
-                                    Converter={StaticResource numDivisionConverter},
-                                    ConverterParameter=4}">
-                <DataGrid.Columns>
-                    <DataGridTemplateColumn Header="Picture" Width="*">
+            <DataGrid x:Name="PlayersDataGrid" ItemsSource="{Binding PlayersOnPage}" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" AutoGenerateColumns="False" IsReadOnly="True" CellStyle="{StaticResource CenterTextDataGridCellStyle}" RowHeight="40" Margin="6" MinRowHeight="{Binding ElementName=PlayersDataGrid, Path=ActualHeight, Converter={StaticResource NumDivisionConverter},ConverterParameter=4}">
+                <DataGridTemplateColumn Header="Picture" Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Image Stretch="UniformToFill" HorizontalAlignment="Center" Margin="3">
                                     <Image.Source>
-                                        <Binding Path="Player.Img">
+                                        <Binding Path="Photo">
                                             <Binding.TargetNullValue>
                                                 <ImageSource>/Resources/person.png</ImageSource>
                                             </Binding.TargetNullValue>
@@ -172,88 +96,29 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTextColumn Header="No." Width="*" Binding="{Binding ShirtNumber}"/>
-                    <DataGridTextColumn Header="Name" Width="*" Binding="{Binding Player.FullName}"/>
-                    <DataGridTextColumn Header="Team" Width="*" Binding="{Binding Team.TeamName}"/>
-                    <DataGridTextColumn Header="Position" Width="*" Binding="{Binding Player.MainPositionName.Abbr}"/>
-                    <DataGridTextColumn Header="Weight" Width="*" Binding="{Binding Player.Weight}"/>
-                    <DataGridTextColumn Header="Height" Width="*" Binding="{Binding Player.Height}"/>
-                    <DataGridTextColumn Header="Experience" Width="*" Binding="{Binding Player.YearExperience}"/>
-                    <DataGridTextColumn Header="Country" Width="*" Binding="{Binding Player.Country.CountryName}"/>
-                </DataGrid.Columns>
+                    <DataGridTextColumn Header="No." Width="*" Binding="{Binding ShirtNumber, StringFormat={}№{0}}"/>
+                    <DataGridTextColumn Header="Name" Width="*" Binding="{Binding FullName}"/>
+                    <DataGridTextColumn Header="Team" Width="*" Binding="{Binding TeamName}"/>
+                    <DataGridTextColumn Header="Position" Width="*" Binding="{Binding Position}"/>
+                    <DataGridTextColumn Header="Weight" Width="*" Binding="{Binding Weight}"/>
+                    <DataGridTextColumn Header="Height" Width="*" Binding="{Binding Height}"/>
+                    <DataGridTextColumn Header="Experience" Width="*" Binding="{Binding Experience}"/>
+                <DataGridTextColumn Header="Country" Width="*" Binding="{Binding County}"/>
             </DataGrid>
         </Grid>
         <StackPanel Grid.Row="2" HorizontalAlignment="Left" Orientation="Horizontal">
-            <Button x:Name="firstPageButton"
-                    Content="|&lt;"
-                    Margin="5"
-                    Width="25"
-                    Height="25"
-                    Background="{StaticResource footerColor}"
-                    Foreground="White"
-                    Click="firstPageButton_Click"/>
-            <Button x:Name="priviusPageButton"
-                    Content="&lt;"
-                    Margin="5"
-                    Width="25"
-                    Height="25"
-                    Background="{StaticResource footerColor}"
-                    Foreground="White"
-                    Click="priviusPageButton_Click"/>
-            <TextBox x:Name="pageIndexTextBox"
-                     Width="45px"
-                     Margin="8"
-                     Text="{Binding CurrentPageNum, Mode=TwoWay}"
-                     TextAlignment="Center"/>
-            <TextBlock Text="of"
-                       Style="{StaticResource NormalText}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
-            <TextBlock x:Name="pageCountTextBlock"
-                       Style="{StaticResource NormalText}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       Margin="10, 0, 10, 0"
-                       Text="{Binding PageCount}"/>
-            <Button x:Name="nextPageButton"
-                    Content="&gt;"
-                    Margin="5"
-                    Width="25"
-                    Height="25"
-                    Background="{StaticResource footerColor}"
-                    Foreground="White"
-                    Click="nextPageButton_Click"/>
-            <Button x:Name="lastPageButton"
-                    Content="&gt;|"
-                    Margin="5"
-                    Width="25"
-                    Height="25"
-                    Background="{StaticResource footerColor}"
-                    Foreground="White"
-                    Click="lastPageButton_Click"/>
-            <TextBlock Style="{StaticResource NormalText}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       Margin="10, 0, 0, 0"
-                       Text="Total "/>
-            <TextBlock Name="itemsCountTextBlock"
-                       Style="{StaticResource NormalText}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       Text="{Binding ItemsCount}"/>
-            <TextBlock Style="{StaticResource NormalText}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       Text=" records, "/>
-            <TextBlock Name="itemsOnPageCountTextBlock"
-                       Style="{StaticResource NormalText}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       Text="{Binding ItemsOnPageCount}"/>
-            <TextBlock Style="{StaticResource NormalText}"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"
-                       Text=" records in one page"/>
+            <Button Command="{Binding GoFirstPageCommand}" Content="|&lt;" Margin="5" Width="25" Height="25" Background="{StaticResource FooterColor}" Foreground="White"/>
+            <Button Command="{Binding GoFirstPageCommand}" Content="&lt;" Margin="5" Width="25" Height="25" Background="{StaticResource FooterColor}" Foreground="White"/>
+            <TextBox  Width="45px" Margin="8" Text="{Binding CurrentPageNum}" TextAlignment="Center"/>
+            <TextBlock Text="of" Style="{StaticResource NormalText}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <TextBlock Style="{StaticResource NormalText}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 0, 10, 0" Text="{Binding PageCount}"/>
+            <Button Command="{Binding GoNextPageCommand}" Content="&gt;" Margin="5" Width="25" Height="25" Background="{StaticResource FooterColor}" Foreground="White"/>
+            <Button Command="{Binding GoLastPageCommand}" Content="&gt;|" Margin="5" Width="25" Height="25" Background="{StaticResource FooterColor}" Foreground="White"/>
+            <TextBlock Style="{StaticResource NormalText}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10, 0, 0, 0" Text="Total "/>
+            <TextBlock Style="{StaticResource NormalText}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding PlayersCount}"/>
+            <TextBlock Style="{StaticResource NormalText}" HorizontalAlignment="Center" VerticalAlignment="Center" Text=" records, "/>
+            <TextBlock Style="{StaticResource NormalText}" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding PlayersOnPageCount}"/>
+            <TextBlock Style="{StaticResource NormalText}" HorizontalAlignment="Center" VerticalAlignment="Center" Text=" records in one page"/>
         </StackPanel>
     </Grid>
 </Page>

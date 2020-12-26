@@ -48,7 +48,7 @@ namespace NBAManagement.Views
                 NBAContext.Instance.SaveChanges();
                 NavigationManager.GoBack();
             }
-            catch(Exception ex)
+            catch
             {
                 MessageBox.Show("Не удалось сохранить матч", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }

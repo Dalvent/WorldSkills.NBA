@@ -4,13 +4,14 @@
              xmlns:local="clr-namespace:NBAManagement" xmlns:converter="clr-namespace:NBAManagement.Converter"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <converter:GameStatusConverter x:Key="gameStatusConverter"/>
-        <converter:BoolToYesNoConverter x:Key="boolToYesNoConverter"/>
-        <converter:ListNumberConverter x:Key="listNumberConverter"/>
+        <!--Converter-->
+        <converter:GameStatusConverter x:Key="GameStatusConverter"/>
+        <converter:BoolToYesNoConverter x:Key="BoolToYesNoConverter"/>
+        
         <!--Color-->
-        <SolidColorBrush x:Key="footerColor" Color="#FF6995C2"/>
-        <SolidColorBrush x:Key="blueColor" Color="#FF0070C0"/>
-        <SolidColorBrush x:Key="darkGray" Color="#FF434343"/>
+        <SolidColorBrush x:Key="FooterColor" Color="#FF6995C2"/>
+        <SolidColorBrush x:Key="BlueColor" Color="#FF0070C0"/>
+        <SolidColorBrush x:Key="DarkGray" Color="#FF434343"/>
 
         <!--Style-->
         <Style x:Key="TitleText" TargetType="TextBlock">
@@ -36,7 +37,7 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style TargetType="TextBlock" x:Key="statusBlock" BasedOn="{StaticResource NormalText}">
+        <Style TargetType="TextBlock" x:Key="StatusBlock" BasedOn="{StaticResource NormalText}">
             <Setter Property="Margin" Value="5, 7"/>
             <Setter Property="Width" Value="125"/>
             <Setter Property="Height" Value="40"/>
@@ -52,7 +53,7 @@
                     <Setter Property="Background" Value="Red"/>
                 </Trigger>
                 <Trigger Property="Text" Value="Not start">
-                    <Setter Property="Background" Value="{StaticResource blueColor}"/>
+                    <Setter Property="Background" Value="{StaticResource BlueColor}"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -62,7 +63,7 @@
             <Setter Property="FontSize" Value="12pt"/>
         </Style>
         <Style TargetType="Button" x:Key="UserTypeButton">
-            <Setter Property="Background" Value="{StaticResource footerColor}"/>
+            <Setter Property="Background" Value="{StaticResource FooterColor}"/>
             <Setter Property="Width" Value="150px"/>
             <Setter Property="Height" Value="70px"/>
             <Setter Property="Foreground" Value="White"/>
@@ -176,27 +177,12 @@
                     <ColumnDefinition Width="60"/>
                     <ColumnDefinition Width="86*"/>
                 </Grid.ColumnDefinitions>
-
-                <Image Source="{Binding Logo}"
-               Grid.RowSpan="2"
-               Margin="5"/>
-                <TextBlock Text="{Binding Name}"
-                   Style="{StaticResource NormalText}"
-                   Grid.Column="1"
-                   Margin="5" Foreground="#FF4F4F4F"/>
-                <Grid Grid.Row="1"
-              Grid.Column="1">
-
-                    <TextBlock Text="{Binding Coach}"
-                   Grid.Column="0"
-                   Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"
-                   Style="{StaticResource NormalText}"
-                   Margin="2, 5, 2, 5"
-                   FontSize="10px"/>
-
+                <Image Source="{Binding Logo}" Grid.RowSpan="2" Margin="5"/>
+                <TextBlock Text="{Binding Name}" Style="{StaticResource NormalText}"  Grid.Column="1" Margin="5" Foreground="#FF4F4F4F"/>
+                <Grid Grid.Row="1"  Grid.Column="1">
+                    <TextBlock Text="{Binding Coach}" Grid.Column="0" Foreground="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Style="{StaticResource NormalText}" Margin="2, 5, 2, 5" FontSize="10px"/>
                 </Grid>
             </Grid>
         </DataTemplate>
-        
     </Application.Resources>
 </Application>

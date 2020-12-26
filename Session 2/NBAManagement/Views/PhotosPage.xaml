@@ -12,7 +12,7 @@
         <TextBlock Text="When you like a photo, you can right-click a photo and choose the download menu item in the context menu to download."
                    Style="{StaticResource NormalText}" HorizontalAlignment="Center" Margin="10"
                    FontSize="14px"/>
-        <Border BorderThickness="1" Margin="10, 35, 10, 45" BorderBrush="{StaticResource darkGray}">
+        <Border BorderThickness="1" Margin="10, 35, 10, 45" BorderBrush="{StaticResource DarkGray}">
             <ListView Name="imagesListView" ItemsSource="{Binding PagedPictures.Filtered}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="-1,0,1,0">
                 <ListView.ItemsPanel>
                     <ItemsPanelTemplate>

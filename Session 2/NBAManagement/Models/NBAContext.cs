@@ -250,13 +250,13 @@ namespace NBAManagement.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Team>()
-                .HasMany(e => e.Matchup)
+                .HasMany(e => e.MatchupsAway)
                 .WithRequired(e => e.TeamAway)
                 .HasForeignKey(e => e.Team_Away)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Team>()
-                .HasMany(e => e.Matchup1)
+                .HasMany(e => e.MatchupHome)
                 .WithRequired(e => e.TeamHome)
                 .HasForeignKey(e => e.Team_Home)
                 .WillCascadeOnDelete(false);

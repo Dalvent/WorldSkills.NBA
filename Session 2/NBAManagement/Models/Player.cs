@@ -4,13 +4,11 @@ namespace NBAManagement.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
     using System.Linq;
 
     [Table("Player")]
     public partial class Player
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Player()
         {
             MatchupLog = new HashSet<MatchupLog>();
@@ -149,17 +147,11 @@ namespace NBAManagement.Models
         private IList<PlayerStatistics> CurrentSeasonStatistic => PlayerStatistics.ToArray().Where(statistic => statistic.Matchup.Season == Season.LastSeason).ToList();
 
         public virtual Country Country { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MatchupLog> MatchupLog { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PlayerInTeam> PlayerInTeam { get; set; }
 
         [ForeignKey("PlayerId")]
         public virtual ICollection<PlayerStatistics> PlayerStatistics { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PositionName> PositionName { get; set; }
     }
 }

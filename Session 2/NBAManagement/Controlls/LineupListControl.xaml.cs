@@ -27,11 +27,11 @@ namespace NBAManagement.Controlls
                 typeof(LineupListControl),
                 new PropertyMetadata(String.Empty));
 
-        public static DependencyProperty PlayersInTeamProperty =
-            DependencyProperty.Register("PlayersInTeam",
-                typeof(IEnumerable<PlayerInTeam>),
+        public static DependencyProperty ItemSourceProperty =
+            DependencyProperty.Register("ItemSource",
+                typeof(IEnumerable<object>),
                 typeof(LineupListControl),
-                new PropertyMetadata(new List<PlayerInTeam>()));
+                new PropertyMetadata(new List<object>()));
 
         public string LineupName
         {
@@ -39,28 +39,20 @@ namespace NBAManagement.Controlls
             set
             {
                 SetValue(LineupNameProperty, value);
-                FillList();
             }
         }
-        public IEnumerable<PlayerInTeam> PlayersInTeam
+        public IEnumerable<object> ItemSource
         {
-            get => (IEnumerable<PlayerInTeam>)GetValue(PlayersInTeamProperty);
+            get => (IEnumerable<object>)GetValue(ItemSourceProperty);
             set
             {
-                SetValue(PlayersInTeamProperty, value);
-                FillList();
+                SetValue(ItemSourceProperty, value);
+
             }
         }
         public LineupListControl()
         {
             InitializeComponent();
-            DataContext = this;
-        }
-
-        public void FillList()
-        {
-            mainListView.ItemsSource = PlayersInTeam
-                .Where(player => player.Player.MainPositionName.Abbr.Trim() == LineupName);
         }
     }
 }

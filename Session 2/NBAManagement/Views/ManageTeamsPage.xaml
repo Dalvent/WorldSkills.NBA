@@ -18,11 +18,11 @@
                     <ComboBox x:Name="divisionComboBox" SelectionChanged="divisionComboBox_SelectionChanged" Width="120" Margin="5, 5, 15, 5"/>
                     <TextBlock Text="Name:" Style="{StaticResource NormalText}" FontSize="12" VerticalAlignment="Center" Margin="5"/>
                     <TextBox x:Name="nameTextBox" Width="120" Margin="5, 5, 15, 5"/>
-                    <Button x:Name="searchButton" Click="searchButton_Click"  Template="{StaticResource RoundButtonTemplate}" Width="60" Height="20" Content="Search" Foreground="{StaticResource darkGray}" FontSize="12px"/>
+                    <Button x:Name="searchButton" Click="searchButton_Click"  Template="{StaticResource RoundButtonTemplate}" Width="60" Height="20" Content="Search" Foreground="{StaticResource DarkGray}" FontSize="12px"/>
                 </StackPanel>
-                <Button x:Name="addNewTeamButton" Click="addNewTeamButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Template="{StaticResource RoundButtonTemplate}" Width="120" Height="20" Content="+Add a new team" Foreground="{StaticResource darkGray}" FontSize="12px"/>
+                <Button x:Name="addNewTeamButton" Click="addNewTeamButton_Click" HorizontalAlignment="Right" VerticalAlignment="Center" Template="{StaticResource RoundButtonTemplate}" Width="120" Height="20" Content="+Add a new team" Foreground="{StaticResource DarkGray}" FontSize="12px"/>
             </Grid>
-            <Border Margin="10" BorderBrush="{StaticResource darkGray}" BorderThickness="1">
+            <Border Margin="10" BorderBrush="{StaticResource DarkGray}" BorderThickness="1">
                 <DockPanel>
                     <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" Text="{Binding FilteredCount, StringFormat={}Total teams: {0}}" Style="{StaticResource NormalText}"/>
                     <DataGrid x:Name="teamDataGrid" ItemsSource="{Binding Filtered}" GridLinesVisibility="Horizontal" Margin="10" CellStyle="{StaticResource CenterTextDataGridCellStyle}" RowHeight="125" IsReadOnly="True" AutoGenerateColumns="False" AlternatingRowBackground="LightGray">

@@ -5,62 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NBAManagement.Views"
       mc:Ignorable="d" 
-      Title="VisitorMainPage">
+      Title="Visitor Main">
 
-    <Border Margin="75" BorderThickness="1px" BorderBrush="{StaticResource footerColor}">
-        <Grid Margin="75">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            
-            <Button x:Name="TeamsButton"
-                Grid.Column="0"
-                Grid.Row="0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Content="Teams"
-                Style="{StaticResource UserTypeButton}"
-                Width="220"
-                FontSize="24px"
-                Click="TeamsButton_Click"/>
+    <Border Margin="75" BorderThickness="1px" BorderBrush="{StaticResource FooterColor}">
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="500">
 
-            <Button x:Name="PlayersButton"
-                Grid.Column="1"
-                Grid.Row="0"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Content="Players"
-                Style="{StaticResource UserTypeButton}"
-                Width="220"
-                FontSize="24px"
-                Click="PlayersButton_Click"/>
-
-            <Button x:Name="Mutchups"
-                Grid.Column="0"
-                Grid.Row="1"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Content="Mutchups"
-                Style="{StaticResource UserTypeButton}"
-                Width="220"
-                FontSize="24px"
-                Click="Mutchups_Click"/>
-
-                <Button x:Name="Photos"
-                Grid.Column="1"
-                Grid.Row="1"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Content="Photos"
-                Style="{StaticResource UserTypeButton}"
-                Width="220"
-                FontSize="24px"   
-                Click="Photos_Click"/>
-            </Grid>
+            <Button Command="{Binding NavigateMainTeamsViewCommand}" Content="Teams" Style="{StaticResource UserTypeButton}" FontSize="24px" Width="220" Margin="10"/>
+            <Button Command="{Binding NavigateMainPlayersViewCommand}" Grid.Column="1" Content="Players" Style="{StaticResource UserTypeButton}" Width="220" FontSize="24px" Margin="10"/>
+            <Button Command="{Binding NavigateMatchupListViewCommand}" Grid.Row="1" Content="Mutchups" Style="{StaticResource UserTypeButton}" Width="220" FontSize="24px" Margin="10"/>
+            <Button Command="{Binding NavigatePhotosViewCommand}" Grid.Column="1" Grid.Row="1" Content="Photos" Style="{StaticResource UserTypeButton}" Width="220" FontSize="24px" Margin="10"/>
+        </WrapPanel>
     </Border>
 </Page>

@@ -1,0 +1,69 @@
+﻿<Page x:Class="NBAManagement.Views.TeamDetailView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NBAManagement.Views"
+      xmlns:converters="clr-namespace:NBAManagement.Converter" xmlns:controlls="clr-namespace:NBAManagement.Controlls"
+      mc:Ignorable="d"
+      Title="Team Detail"
+      d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Margin="5, 10, 5, 20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Image Source="{Binding Logo}"/>
+            <TextBlock Style="{StaticResource NormalText}" Text="{Binding Name}" Margin="20, 0, 0, 0"/>
+            <TextBlock Style="{StaticResource NormalText}" Text="|" Margin="10, 0, 0, 0"/>
+            <TextBlock Style="{StaticResource NormalText}" Text="{Binding DivisionName}" Margin="10, 0, 0, 0"/>
+        </StackPanel>
+        <Grid Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200,50,0,0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+            <ComboBox ItemsSource="{Binding Path=Seasons, Mode=OneWay}" SelectedItem="{Binding Path=FilterSeason, Mode=TwoWay}" SelectedIndex="0" Margin="0, 3, 20, 0"/>
+        </Grid>
+        <TabControl x:Name="MainTabControl" Grid.Row="1">
+            <TabItem x:Name="RoasterTab" Header="Roaster">
+                <DataGrid ItemsSource="{Binding Players}" Margin="20" AutoGenerateColumns="False" IsReadOnly="True" AlternatingRowBackground="LightGray" RowHeight="42" CellStyle="{StaticResource StandartCell}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="No." Binding="{Binding ShirtNumber, StringFormat={}№{0}}" Width="*"/>
+                        <DataGridTextColumn Header="Name" Binding="{Binding FullName}" Width="*"/>
+                        <DataGridTextColumn Header="Position" Binding="{Binding PositionName.Abbr}" Width="*"/>
+                        <DataGridTextColumn Header="DateofBirth" Binding="{Binding DateOfBirth, StringFormat='MM/dd/yyyy'}" Width="*"/>
+                        <DataGridTextColumn Header="College" Binding="{Binding College}" Width="*"/>
+                        <DataGridTextColumn Header="Experience" Binding="{Binding YearExperience}" Width="*"/>
+                        <DataGridTextColumn Header="Salary" Binding="{Binding Salary}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem x:Name="MatchupTab" Header="Matchup">
+                <DataGrid ItemsSource="{Binding TeamMatchups}" Margin="20" AutoGenerateColumns="False" IsReadOnly="True" AlternatingRowBackground="LightGray" RowHeight="42" CellStyle="{StaticResource StandartCell}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Date" Binding="{Binding StartDateTime, StringFormat='MM/dd/yyyy'}" Width="*"/>
+                        <DataGridTextColumn Header="Matchup Type" Binding="{Binding MatchupTypeName}" Width="*"/>
+                        <DataGridTextColumn Header="Opponent" Binding="{Binding Opponent}" Width="*"/>
+                        <DataGridTextColumn Header="Start Time" Binding="{Binding StartDateTime, StringFormat='HH:mm'}" Width="*"/>
+                        <DataGridTextColumn Header="Result" Binding="{Binding Result}" Width="*"/>
+                        <DataGridTextColumn Header="Location" Binding="{Binding Location}" Width="*"/>
+                        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem x:Name="LineupTab" Header="Lineup">
+                <Canvas>
+                    <Image Source="/NBAManagement;component/Resources/lineup.jpg" Panel.ZIndex="-1" Width="900"/>
+                    <controlls:LineupListControl x:Name="test" Panel.ZIndex="1" Height="auto" Width="auto" Canvas.Left="350" Canvas.Top="109" LineupName="C" ItemSource="{Binding CenterPlayers}"/>
+                    <controlls:LineupListControl Panel.ZIndex="1" Height="auto" Width="auto" Canvas.Left="15" Canvas.Top="100" LineupName="PF" ItemSource="{Binding PowerForwardPlayers}"/>
+                    <controlls:LineupListControl Panel.ZIndex="1" Height="auto" Width="auto" Canvas.Left="50" Canvas.Top="238" LineupName="SG" ItemSource="{Binding ShootingGuardPlayers}"/>
+                    <controlls:LineupListControl Panel.ZIndex="1" Height="auto" Width="auto" Canvas.Left="716" Canvas.Top="100" LineupName="SF" ItemSource="{Binding SmallForwardPlayers}"/>
+                    <controlls:LineupListControl Panel.ZIndex="1" Height="auto" Width="auto" Canvas.Left="649" Canvas.Top="247" LineupName="PG" ItemSource="{Binding PointGuardPlayers}"/>
+                </Canvas>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Page>

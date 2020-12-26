@@ -14,16 +14,21 @@ namespace NBAManagement
         {
             this.Original = collection;
             pageFilter = new PageFilter<T>(pageSize, START_PAGE_NUM);
+            UpdateFiltered();
         }
         public int CurrentPageItemCount => Original.Count();
         public int ItemCount => Filtered.Count();
-        public IEnumerable<T> Original { get; private set; }
-        public IEnumerable<T> Filtered => pageFilter.Use(Original);
+        public IEnumerable<T> Original { get; set; }
+        public IEnumerable<T> Filtered { get; private set; }
         public int PageCount => pageFilter.GetPageCount(Original);
         public int PageSize
         {
             get => pageFilter.PageSize;
-            set => pageFilter.PageSize = value;
+            set 
+            {
+                pageFilter.PageSize = value;
+                UpdateFiltered();
+            }
         }
         public int CurrentPageNum
         {
@@ -42,15 +47,18 @@ namespace NBAManagement
                 {
                     pageFilter.CurrentPageNum = value;
                 }
+                UpdateFiltered();
             }
         }
         public void NextPage()
         {
             CurrentPageNum++;
+            UpdateFiltered();
         }
         public void PriviusPage()
         {
             CurrentPageNum--;
+            UpdateFiltered();
         }
         public IEnumerator<T> GetEnumerator()
         {
@@ -59,6 +67,10 @@ namespace NBAManagement
         IEnumerator IEnumerable.GetEnumerator()
         {
             return Filtered.GetEnumerator();
+        }
+        private void UpdateFiltered()
+        {
+            Filtered = pageFilter.Use(Original);
         }
     }
 }

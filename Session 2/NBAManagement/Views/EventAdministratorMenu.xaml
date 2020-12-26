@@ -9,7 +9,7 @@
       Title="Event Administrator menu">
 
     <Grid>
-        <Border Margin="75" BorderThickness="1px" BorderBrush="{StaticResource footerColor}">
+        <Border Margin="75" BorderThickness="1px" BorderBrush="{StaticResource FooterColor}">
             <Grid Margin="75">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

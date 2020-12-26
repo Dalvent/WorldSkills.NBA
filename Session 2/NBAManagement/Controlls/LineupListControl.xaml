@@ -4,15 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:NBAManagement.Controlls"
-             mc:Ignorable="d">
+             mc:Ignorable="d"
+             x:Name="Root">
     <Grid Panel.ZIndex="1" Height="auto" Width="auto" Canvas.Left="15" Canvas.Top="100">
-        <ListView Name="mainListView" Margin="4" Background="LightGray" AlternationCount="1000">
+        <ListView ItemsSource="{Binding ElementName=Root, Path=ItemSource}" Margin="4" Background="LightGray" AlternationCount="1000">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Foreground="{StaticResource blueColor}"
-                               Margin="30, 5"
-                               Text="{Binding Player.FullName}"
-                               Style="{StaticResource NormalText}"/>
+                    <TextBlock Foreground="{StaticResource BlueColor}" Margin="30, 5" Text="{Binding}" Style="{StaticResource NormalText}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
             <ListBox.ItemContainerStyle>
@@ -25,18 +23,8 @@
                 </Style>
             </ListBox.ItemContainerStyle>
         </ListView>
-        <Border HorizontalAlignment="Left"
-                VerticalAlignment="Top"
-                Background="#FFFFFF96"
-                BorderBrush="#FF818130"
-                BorderThickness="1px"
-                Width="35px"
-                Height="25px">
-            <TextBlock Style="{StaticResource NormalText}"
-                       Text="{Binding LineupName}"
-                       TextAlignment="Center"
-                       Margin="6, 3" 
-                       Foreground="{StaticResource blueColor}"/>
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Background="#FFFFFF96" BorderBrush="#FF818130" BorderThickness="1px" Width="35px" Height="25px">
+            <TextBlock Style="{StaticResource NormalText}" Text="{Binding Path=LineupName, ElementName=Root}" TextAlignment="Center" Margin="6, 3"  Foreground="{StaticResource BlueColor}"/>
         </Border>
     </Grid>
 </UserControl>

@@ -11,7 +11,7 @@
 
     <Grid>
         <TabControl Margin="5, 20, 5, 40">
-            <TabItem Header="Preseason" Width="100" Height="23" TextBlock.TextAlignment="Center" Padding="4" BorderBrush="{StaticResource darkGray}" >
+            <TabItem Header="Preseason" Width="100" Height="23" TextBlock.TextAlignment="Center" Padding="4" BorderBrush="{StaticResource DarkGray}" >
                 <Grid>
                     <DataGrid Margin="5, 40" Name="preseasonDataGrid" AutoGenerateColumns="False" MinRowHeight="20" CellStyle="{StaticResource CenterTextDataGridCellStyle}" IsReadOnly="True" AlternatingRowBackground="LightGray">
                         <DataGrid.Columns>
@@ -20,7 +20,7 @@
                             <DataGridTextColumn Binding="{Binding TeamHome.TeamName}" Header="Team(Home)" Width="*"/>
                             <DataGridTextColumn Binding="{Binding Starttime, StringFormat={}{0:hh:mm}}" Header="Time" Width="*"/>
                             <DataGridTextColumn Binding="{Binding Location}" Header="Location" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding IsFinished, Converter={StaticResource boolToYesNoConverter}}" Header="Finished" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding IsFinished, Converter={StaticResource BoolToYesNoConverter}}" Header="Finished" Width="*"/>
                             <DataGridTemplateColumn Header="Update" Width="*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
@@ -39,7 +39,7 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Regular Season" Width="100" Height="23" TextBlock.TextAlignment="Center" Padding="4" BorderBrush="{StaticResource darkGray}" >
+            <TabItem Header="Regular Season" Width="100" Height="23" TextBlock.TextAlignment="Center" Padding="4" BorderBrush="{StaticResource DarkGray}" >
                 <Grid>
                     <Button x:Name="addNewMatchup" Click="addNewMatchup_Click" Content="+Add new matchup"  Margin="7" Template="{StaticResource RoundButtonTemplate}" Width="170" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                     <DataGrid Margin="5, 40" Name="regularDataGrid" AutoGenerateColumns="False" RowHeight="20" CellStyle="{StaticResource CenterTextDataGridCellStyle}" IsReadOnly="False" AlternatingRowBackground="LightGray">
@@ -49,7 +49,7 @@
                             <DataGridTextColumn Binding="{Binding TeamHome.TeamName}" Header="Team(Home)" Width="*"/>
                             <DataGridTextColumn Binding="{Binding Starttime, StringFormat={}{0:hh:mm}}" Header="Time" Width="*"/>
                             <DataGridTextColumn Binding="{Binding Location}" Header="Location" Width="*"/>
-                            <DataGridTextColumn Binding="{Binding IsFinished, Converter={StaticResource boolToYesNoConverter}}" Header="Finished" Width="*"/>
+                            <DataGridTextColumn Binding="{Binding IsFinished, Converter={StaticResource BoolToYesNoConverter}}" Header="Finished" Width="*"/>
                             <DataGridTemplateColumn Header="Update" Width="*">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
